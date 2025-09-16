@@ -35,6 +35,40 @@ services:
     networks:
       - observabilidad-net
 
+  loki:
+    image: grafana/loki:2.9.4
+    container_name: loki
+    volumes:
+      - ./loki/config.yaml:/etc/loki/config.yaml
+      - ./loki/data:/loki         # <-- esto monta todo lo necesario
+    command: -config.file=/etc/loki/config.yaml
+    ports:
+      - "3100:3100"
+
+  fluent-bit:
+    image: fluent/fluent-bit:2.2
+    container_name: fluent-bit
+    volumes:
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+    environment:
+      - FLB_DB=/fluent-bit/state/flb_kube.db              # Especificamos ruta alternativa
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana:10.4.1
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - ./grafana:/var/lib/grafana
+    depends_on:
+      - loki      
+
 networks:
   observabilidad-net:
     driver: bridge
