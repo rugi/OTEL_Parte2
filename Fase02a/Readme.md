@@ -1,57 +1,48 @@
+🔁 Fase 2a – Etiquetado y transición de Fluent Bit a Promtail
+🎯 Objetivo general:
 
-# 📘 Fase 2 – Captura y Visualización de Logs
+Mejorar la calidad de los logs recolectados mediante etiquetado enriquecido, y reemplazar Fluent Bit por Promtail como agente de recolección principal en esta etapa del laboratorio.
 
-## 🎯 Objetivo
-Capturar logs desde contenedores Docker y visualizarlos en Grafana usando Loki como backend. Esta fase incorpora **Promtail y Fluent Bit** para mostrar ambas opciones de recolección de logs.
+✅ Actividades clave
 
----
+Agregar etiquetas útiles (labels) en Fluent Bit
 
-## 🟩 Alcance técnico mínimo
+Incluir: container_name, app, env, etc.
 
-- [ ] **Agregar Loki al `docker-compose.yml`**
-- [ ] **Agregar Promtail y Fluent Bit como servicios** (ambos coexistiendo, uno puede estar desactivado)
-- [ ] **Configurar Promtail para leer logs de contenedores Docker**
-- [ ] **Configurar Fluent Bit como alternativa de lectura/exportación**
-- [ ] **Visualizar logs de `app-java` en Grafana**
-- [ ] **Verificar etiquetas (`container`, `job`, etc.) y búsqueda funcional**
-- [ ] **Preparar correlación futura con `trace_id`** (pero no implementarla aún)
+Objetivo: permitir búsquedas como {container_name="otel_parte2-app-java"} en Grafana/Loki.
 
----
+Validar búsqueda por etiquetas
 
-## 🧩 Alcance opcional / avanzado
+Confirmar en Loki y en Grafana que los logs se pueden consultar utilizando los nuevos labels.
 
-- [ ] Usar **solo Fluent Bit** si se requiere mayor flexibilidad (filtros, enrouting, enriquecimiento)
-- [ ] Emitir logs **estructurados (JSON)** desde `app-java` con `logback` + `JsonEncoder`
-- [ ] Inyectar `trace_id` y `span_id` en logs usando **MDC (Mapped Diagnostic Context)** o bridge con SDK de OpenTelemetry
-- [ ] Crear **paneles de logs críticos** en Grafana (por nivel, mensaje, job, etc.)
-- [ ] Comparar **Promtail vs Fluent Bit** en capacidad de etiquetas, rendimiento y facilidad de uso
+Desactivar Fluent Bit (sin eliminar configuración)
 
----
+Parar el servicio para evitar duplicidad.
 
-## 🔍 Validación de resultados
+Mantenerlo disponible como alternativa futura o comparativa.
 
-| Validación técnica                                 | Cómo comprobarlo                                                                 |
-|----------------------------------------------------|----------------------------------------------------------------------------------|
-| Ver logs de `app-java` en Grafana (tiempo real)    | Abrir Grafana → ir a *Explore* → seleccionar *Loki* → visualizar por `container` |
-| Logs tienen etiquetas útiles                       | Usar `{job="docker", container="app-java"}` para filtrar                         |
-| Logs muestran mensajes INFO, WARN, ERROR           | Filtrar por `level` si se usan logs estructurados o buscar por texto            |
-| Promtail está funcionando                          | `docker-compose logs promtail` → debe mostrar logs capturados                   |
-| Fluent Bit está funcionando                        | `docker-compose logs fluent-bit` → debe mostrar conexión con Loki               |
-| Grafana puede consultar Loki sin errores           | Panel Explore debe responder sin errores                                         |
-| Loki muestra retención temporal                    | Buscar logs de hace minutos para comprobar retención                            |
-| Preparar búsqueda por `trace_id`                   | Simular trazas con ID y revisar si aparecen en logs como texto plano            |
+Agregar Promtail al docker-compose.yml
 
----
+Configurarlo para leer los logs de los contenedores Docker.
 
-## 🧠 ¿Por qué incluir ambos?
+Integrarlo con Loki como destino.
 
-| Promtail                      | Fluent Bit                         |
-|------------------------------|------------------------------------|
-| Sencillo de configurar       | Mucho más flexible y escalable     |
-| Integración nativa con Loki  | Compatible con múltiples backends  |
-| Ideal para comenzar rápido   | Ideal para producción compleja     |
+Validar que Promtail levanta correctamente
 
-> En este laboratorio, ambos estarán disponibles para que el participante active uno u otro según el caso.
+Revisar con docker-compose logs promtail que el servicio arranca sin errores.
 
----
+Verificar conexión con Loki.
 
+Promtail toma el lugar de Fluent Bit
+
+Confirmar que los logs de app-java y otros contenedores están siendo recolectados por Promtail.
+
+Validar en Grafana que todo sigue funcionando
+
+Confirmar que:
+
+Se siguen viendo los logs.
+
+Se pueden hacer búsquedas con labels.
+
+No hay pérdida de logs o regresión de funcionalidad.
