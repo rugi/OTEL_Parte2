@@ -1,0 +1,26 @@
+scrape_configs:
+  - job_name: promtail
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: promtail
+          __path__: /var/lib/docker/containers/*/*.log
+
+    pipeline_stages:
+      - timestamp:
+          source: time
+          format: RFC3339Nano
+          # opcionalmente, podemos aplicar un retraso máximo
+          # para evitar líneas muy en el futuro también
+          max_age: 1h
+      - docker: {}  # Desempaqueta JSON de Docker
+      - json:
+          expressions:
+            container_name: container_name
+            app: app
+            env: env
+      - labels:
+          container_name:
+          app:
+          env:
