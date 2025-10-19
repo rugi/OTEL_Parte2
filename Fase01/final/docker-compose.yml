@@ -1,6 +1,6 @@
-version: '3.8'
 services:
   app-java:
+    container_name: app-java
     build:
       context: ./app-java
     ports:
@@ -15,24 +15,29 @@ services:
       - observabilidad-net
 
   otel-collector:
+    container_name: otel-collector
     image: otel/opentelemetry-collector-contrib:0.86.0
     volumes:
-      - ./otel-collector/config.yaml:/etc/otelcol-contrib/config.yaml
+      - ./otel-collector/config.yaml:/etc/otelcol-contrib/config.yaml:ro
     ports:
       - "4317:4317"
       - "55681:55681"
-      - "13133:13133"       
+      - "13133:13133"
+      - "8888:8888"
+    depends_on:
+      - jaeger
     networks:
       - observabilidad-net
 
   jaeger:
+    container_name: jaeger
     image: jaegertracing/all-in-one:1.49
     ports:
       - "16686:16686"
       - "14250:14250"
-      - "9411:9411"  
+      - "9411:9411"
     environment:
-      - COLLECTOR_ZIPKIN_HOST_PORT=:9411            
+      - COLLECTOR_ZIPKIN_HOST_PORT=:9411
     networks:
       - observabilidad-net
 
