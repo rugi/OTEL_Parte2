@@ -56,7 +56,7 @@ graph TD
     D2 ---|Zipkin Exporter| D3
 
     %% Red
-    subgraph Network [🌐 observabilidad-net (bridge)]
+    subgraph Network [🌐 observabilidad-net -bridge-]
         D1
         D2
         D3
