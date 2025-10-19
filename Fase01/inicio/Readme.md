@@ -43,3 +43,13 @@ graph TD
     style D3 fill:#ff6b81,stroke:#2f3542
     style Network fill:#dfe4ea,stroke:#57606f,stroke-dasharray:3 3
 ```
+
+## Pasos
+
+### Docker 101.
+### Aplicacion Java.
+### Otel-Collector.
+### Jaeger.
+### Juntemos todo.
+### Ultimos detalles.
+### Ahora a analizar.
