@@ -46,9 +46,9 @@ graph TD
 
     %% Contenedores encima del Compose
     subgraph Containers [Contenedores en ejecución]
-        C --> D1[app-java\nPuerto: 8080]
-        C --> D2[otel-collector\nPuertos: 4317, 55681, 13133, 8888]
-        C --> D3[jaeger\nPuertos: 16686, 14250, 9411]
+        C --> D1[app-java Puerto: 8080]
+        C --> D2[otel-collector Puertos: 4317, 55681, 13133, 8888]
+        C --> D3[jaeger Puertos: 16686, 14250, 9411]
     end
 
     %% Conexiones de red internas
