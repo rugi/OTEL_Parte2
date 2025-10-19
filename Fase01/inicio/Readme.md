@@ -33,10 +33,6 @@ graph TD
         C --> D2[otel-collector]
         C --> D3[jaeger]
     end
-```
- 
-
- 
 
     %% Estilo visual
     style A fill:#2f3542,stroke:#fff,stroke-width:1px,color:#fff
