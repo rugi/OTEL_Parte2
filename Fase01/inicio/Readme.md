@@ -50,7 +50,7 @@ graph TD
 #### Docker 101.
 #### Aplicacion Java.
 #### Otel-Collector.
-### Jaeger.
+#### Jaeger.
 -------
 ### Juntemos todo.
 -------
