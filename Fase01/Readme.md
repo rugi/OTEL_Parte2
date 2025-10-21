@@ -25,7 +25,7 @@ Asumiremos que partimos desde cero, que solo tenemos una app en java funcionando
 ``` mermaid
 graph TD
     %% Contenedores encima del Compose
-    subgraph Containers [Contenedores en ejecución]
+    subgraph Containers [App Java]
         D1[app-java]
     end
     %% Estilo visual
