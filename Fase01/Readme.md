@@ -19,8 +19,6 @@ A esto en OpenTelemetry lo conocemos como "instrumentación automática", el jar
 Utilizaremos Docker para facilitar las cosas, sino sabes Docker, no te preocupes, la redacción será amigable y tratará de irte aclarando dudas,
 si ya sabes Docker, solo verás redundante esa perte, pero te la puedes saltar.
 
-Así que, manos  a la obra.
-
 Asumiremos que partimos desde cero, que solo tenemos una app en java funcionando.
 ``` mermaid
 graph TD
@@ -32,7 +30,7 @@ graph TD
     style D1 fill:#7bed9f,stroke:#2f3542
 ``` 
 
-Diagrama de componentes:
+Diagrama de componentes que aprenderemos a utilizar:
 ``` mermaid
 graph TD
     A[💻 Linux Host] --> B[🐳 Docker Engine]
@@ -99,3 +97,5 @@ La carpeta inicio es nuestro punto de partida, a partir de ahí, junto con la gu
 La carpeta final tiene ya todo terminado, puedes usarla de referencia o, puedes ir directo a ella para ver todo ya terminado.
 Si tu intención es aprender todo el proceso, te recomiendo seguir la guía desde la carpeta inicio, si solo quieres tener referencias o ver todo en acción,
 la carpeta final es para tí.
+
+Así que, manos  a la obra.
