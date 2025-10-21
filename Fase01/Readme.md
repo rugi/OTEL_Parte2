@@ -21,7 +21,16 @@ si ya sabes Docker, solo verás redundante esa perte, pero te la puedes saltar.
 
 Así que, manos  a la obra.
 
-Asumiremos que partimos desde cero.
+Asumiremos que partimos desde cero, que solo tenemos una app en java funcionando.
+``` mermaid
+    %% Contenedores encima del Compose
+    subgraph Containers [Contenedores en ejecución]
+        D1[app-java]
+        D2[otel-collector] 
+    end
+    %% Estilo visual
+    style D1 fill:#7bed9f,stroke:#2f3542
+``` 
 
 Diagrama de componentes:
 ``` mermaid
