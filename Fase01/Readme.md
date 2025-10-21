@@ -23,6 +23,7 @@ Así que, manos  a la obra.
 
 Asumiremos que partimos desde cero, que solo tenemos una app en java funcionando.
 ``` mermaid
+graph TD
     %% Contenedores encima del Compose
     subgraph Containers [Contenedores en ejecución]
         D1[app-java]
