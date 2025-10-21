@@ -87,7 +87,7 @@ graph TD
     style D3 fill:#ff6b81,stroke:#2f3542
     style Network fill:#dfe4ea,stroke:#57606f,stroke-dasharray:3 3
 ``` 
-Veras 2 carpetas:
+Para contiunar, veras 2 carpetas:
 
 * inicio
 * final.
