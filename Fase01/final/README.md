@@ -26,7 +26,7 @@ Aquí se construye un stack mínimo pero funcional que permite capturar, recolec
 
 ```
 fase-1-tracing/
-├── app-java/                  # Proyecto Java instrumentado
+├── app-java/                  # Proyecto Java instrumentado (instrumentación automática)
 ├── otel-collector/            # Configuración del Collector
 │   └── config.yaml
 ├── docker-compose.yml         # Orquestador de servicios
