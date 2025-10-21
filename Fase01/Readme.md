@@ -27,7 +27,6 @@ graph TD
     %% Contenedores encima del Compose
     subgraph Containers [Contenedores en ejecución]
         D1[app-java]
-        D2[otel-collector] 
     end
     %% Estilo visual
     style D1 fill:#7bed9f,stroke:#2f3542
