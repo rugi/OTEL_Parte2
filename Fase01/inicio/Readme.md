@@ -23,9 +23,11 @@ Tenemos entonces:
 #### Jaeger.
 -------
 ### Juntemos todo.
+
 LLegado a este punto, ya todos los contenedores están funcionando, ahora lo que sigue es, ponerlos a trabajar en conjunto, para ello, realizaremos los siguientes ajustes:
 -------
 ### Ultimos detalles.
+
 Tenemos todo listo, entonces, hagamos una ultima validación antes de ponernos a analizar lo que podemos obtener de nuestro stack inicial de observabilidad.
 -------
 ### Ahora a analizar.
