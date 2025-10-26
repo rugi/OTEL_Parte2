@@ -82,7 +82,7 @@ En el caso de los contenedores, hay un estandar subyacente que lo permite, y es 
 No es necesario conocer el estandar, solo lo menciono para tener claro quien hace la magia, y, si derepente sale algun nuevo actor, tu pregunta como todo un profesional sea: ¿Respeta compleamente el OCI?  ;)
 Eso sí, debemos agradecer a Docker pues, ellos dieron parte de su código en el 2015 para que ahora tengamos el estandar y tantas alternativas.
 
-Tenemos claro pues, de que estamos hablando de contenedores.
+
 
 ```mermaid
 graph TB
@@ -133,7 +133,9 @@ graph TB
     style A2 fill:#ffe5e5
     style A3 fill:#e5f9f7
     style A4 fill:#e5f9f7
-``` 
+```
+
+Tenemos claro pues, de que estamos hablando de contenedores.
     
 
 Pero ¿Qué tienen de especial y porqué se usan tanto?
