@@ -1,7 +1,7 @@
 
 ## Pasos
 -------
-Tenemos clara la meta, así que, comencemos con la construcción de la Fase 1.
+Tenemos clara la <a href="../Readme.md">meta</a>, así que, comencemos con la construcción de la Fase 1.
 Recuerda que puedes revisar la carpeta final si tienes alguna duda concreta o si quieres ver todo funcionando.
 
 Para esta fase 1, requeriremos 3 componentes:
