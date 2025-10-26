@@ -1,4 +1,79 @@
 # Docker 101
+Hablar de Docker es realmente hablar de contenedores, así somo Github es una servicio que nos permite usar GIT (el sistema distribuido de control de versiones), Docker es una manera de utilizar Contenedores.
+Esto quiere decir, que hay otras formas de usar contenedores.
+
+```mermaid
+classDiagram
+    class GIT {
+        <<interface>>
+        +control de versiones
+        +ramificación
+        +fusión
+        +historial
+    }
+    
+    class Contenedores {
+        <<interface>>
+        +aislamiento
+        +portabilidad
+        +gestión de imágenes
+        +orquestación
+    }
+    
+    class GitHub {
+        +repositorios
+        +colaboración
+        +CI/CD
+        +pull requests
+    }
+    
+    class GitLab {
+        +DevOps integrado
+        +pipelines
+        +registros
+    }
+    
+    class BitBucket {
+        +integración Atlassian
+        +permisos avanzados
+    }
+    
+    class Docker {
+        +contenedores ligeros
+        +Docker Hub
+        +Docker Compose
+    }
+    
+    class Podman {
+        +sin daemon
+        +rootless
+        +compatible OCI
+    }
+    
+    class containerd {
+        +runtime básico
+        +usado por K8s
+        +gestión de imágenes
+    }
+    
+    GIT <|.. GitHub : implementa
+    GIT <|.. GitLab : implementa
+    GIT <|.. BitBucket : implementa
+    
+    Contenedores <|.. Docker : implementa
+    Contenedores <|.. Podman : implementa
+    Contenedores <|.. containerd : implementa
+    
+    style GIT fill:#e1f5ff
+    style Contenedores fill:#e1f5ff
+    style GitHub fill:#fff3cd
+    style GitLab fill:#fff3cd
+    style BitBucket fill:#fff3cd
+    style Docker fill:#d4edda
+    style Podman fill:#d4edda
+    style containerd fill:#d4edda
+```
+
 
 ## VM vs Contenedor
 
