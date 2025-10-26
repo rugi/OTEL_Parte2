@@ -84,6 +84,58 @@ Eso sí, debemos agradecer a Docker pues, ellos dieron parte de su código en el
 
 Tenemos claro pues, de que estamos hablando de contenedores.
 
+```mermaid
+graph TB
+    subgraph "CASO 1: Git - Software Base Único"
+        Git["🔧 Git<br/>(Software Base)<br/>---------------<br/>• Un solo código fuente<br/>• Creado por Linus Torvalds<br/>• Comandos estándar<br/>• Protocolo definido"]
+        
+        GitHub["⭐ GitHub<br/>---------------<br/>Git + Features:<br/>• UI Web avanzada<br/>• Actions (CI/CD)<br/>• Copilot<br/>• GitHub Pages"]
+        
+        GitLab["⭐ GitLab<br/>---------------<br/>Git + Features:<br/>• DevOps completo<br/>• Pipelines integrados<br/>• Kubernetes integrado<br/>• Self-hosted"]
+        
+        BitBucket["⭐ BitBucket<br/>---------------<br/>Git + Features:<br/>• Integración Atlassian<br/>• Jira integration<br/>• Pipelines<br/>• Permisos granulares"]
+        
+        Git -->|"usan el mismo<br/>Git internamente"| GitHub
+        Git -->|"usan el mismo<br/>Git internamente"| GitLab
+        Git -->|"usan el mismo<br/>Git internamente"| BitBucket
+    end
+    
+    subgraph "CASO 2: OCI - Estándar con Múltiples Implementaciones"
+        OCI["📋 OCI<br/>(Estándar/Especificación)<br/>---------------<br/>• Runtime Spec<br/>• Image Spec<br/>• Distribution Spec<br/>• NO es código ejecutable"]
+        
+        Docker["🐳 Docker<br/>---------------<br/>Implementación propia:<br/>• Docker Engine<br/>• Docker Desktop<br/>• Docker Compose<br/>• Código independiente"]
+        
+        Podman["🦭 Podman<br/>---------------<br/>Implementación propia:<br/>• Sin daemon<br/>• Rootless nativo<br/>• Pod support<br/>• Código independiente"]
+        
+        Containerd["📦 containerd<br/>---------------<br/>Implementación propia:<br/>• Runtime minimalista<br/>• Usado por K8s<br/>• CNCF project<br/>• Código independiente"]
+        
+        OCI -.->|"cumple con<br/>especificación"| Docker
+        OCI -.->|"cumple con<br/>especificación"| Podman
+        OCI -.->|"cumple con<br/>especificación"| Containerd
+    end
+    
+    subgraph "ANALOGÍA"
+        A1["Git ≈ TCP/IP<br/>(Implementación única<br/>del protocolo)"]
+        A2["GitHub/GitLab ≈ ISPs<br/>(Proveedores que usan<br/>la misma tecnología)"]
+        A3["OCI ≈ HTTP Spec<br/>(Estándar escrito<br/>en documentos)"]
+        A4["Docker/Podman ≈ Navegadores<br/>(Implementaciones diferentes<br/>del mismo estándar)"]
+    end
+    
+    style Git fill:#ff6b6b,color:#fff
+    style OCI fill:#4ecdc4,color:#fff
+    style GitHub fill:#ffd93d
+    style GitLab fill:#ffd93d
+    style BitBucket fill:#ffd93d
+    style Docker fill:#95e1d3
+    style Podman fill:#95e1d3
+    style Containerd fill:#95e1d3
+    style A1 fill:#ffe5e5
+    style A2 fill:#ffe5e5
+    style A3 fill:#e5f9f7
+    style A4 fill:#e5f9f7
+``` 
+    
+
 Pero ¿Qué tienen de especial y porqué se usan tanto?
 
 
