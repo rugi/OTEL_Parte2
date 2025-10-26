@@ -11,13 +11,15 @@ Para esta fase 1, requeriremos 3 componentes:
 * Jaeger, un server Jaeger, será nuestro front de consulta, con Jaeger inspeccionaremos nuestro Collector.
 
 Y, agregaremos un componente principal: Docker.
+Si ya estás familiarizado con Docker, puedes saltarte ese paso e ir directamente a la construcción de la app en java, 
+sino, en Docker 101 tendrás todo el conocimiento necesario para concluir este y todos los ejercicios.
 
 Tenemos entonces:
 
 ### Componentes
 
 #### Docker 101.
-* <a href="componentes/Docker.md">Docker 101</a>
+* <a href="componentes/Docker.md">Docker 101</a>. Todo lo que debes saber de Docker para completar este y los siguientes ejercicios.
 #### Aplicacion Java.
 #### Otel-Collector.
 #### Jaeger.
