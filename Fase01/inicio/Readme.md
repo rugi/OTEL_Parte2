@@ -30,8 +30,11 @@ Tenemos entonces:
 #### Docker 101.
 * <a href="componentes/Docker.md">Docker 101</a>. Todo lo que debes saber de Docker para completar este y los siguientes ejercicios.
 #### Aplicacion Java.
+* <a href="componentes/Java.md">Aplicación java</a>. La aplicación java que usaremos de ejemplo.
 #### Otel-Collector.
+* <a href="componentes/OtelCollector.md">OTEL Collector</a>. La configuración del servidor Collector.
 #### Jaeger.
+* <a href="componentes/Jaeger.md">OTEL Collector</a>. La configuración del servidor de Jaeger.
 -------
 
 ### Juntemos todo.
