@@ -39,7 +39,11 @@ Tenemos entonces:
 
 ### Juntemos todo.
 
-LLegado a este punto, ya todos los contenedores están funcionando, ahora lo que sigue es, ponerlos a trabajar en conjunto, para ello, realizaremos los siguientes ajustes:
+LLegado a este punto, ya todos los contenedores están funcionando en aislado y has validado con Docker que todo está OK,
+estamos usando Docker compose y, todo está ya funcionando.
+
+Ahora lo que sigue es, ponerlos a trabajar en conjunto, para ello, realizaremos los siguientes ajustes:
+
 
 -------
 
