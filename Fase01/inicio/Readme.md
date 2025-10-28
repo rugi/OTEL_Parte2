@@ -34,7 +34,7 @@ Tenemos entonces:
 #### Otel-Collector.
 * <a href="componentes/OtelCollector.md">OTEL Collector</a>. La configuración del servidor Collector.
 #### Jaeger.
-* <a href="componentes/Jaeger.md">OTEL Collector</a>. La configuración del servidor de Jaeger.
+* <a href="componentes/Jaeger.md">Jaeger</a>. La configuración del servidor de Jaeger.
 -------
 
 ### Juntemos todo.
