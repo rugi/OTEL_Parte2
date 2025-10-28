@@ -19,21 +19,6 @@ craremos esta estructura de carpetas, puedes crear una carpeta principal llamada
 ```shell
 ├ workarea
 ├───app-java
-│   └───src
-│       ├───main
-│       │   ├───java
-│       │   │   └───com
-│       │   │       └───example
-│       │   │           └───app_java
-│       │   │               └───controller
-│       │   └───resources
-│       │       ├───static
-│       │       └───templates
-│       └───test
-│           └───java
-│               └───com
-│                   └───example
-│                       └───app_java
 ├───jaeger
 ├───otel-collector
 ```
