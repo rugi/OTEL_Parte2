@@ -15,7 +15,7 @@ Si ya estás familiarizado con Docker, puedes saltarte ese paso e ir directament
 sino, en Docker 101 tendrás todo el conocimiento necesario para concluir este y todos los ejercicios.
 
 Para mantener separados los componentes y tener organizados mejor nuestro proyecto (además de que és más didactico),
-craremos esta estructura de carpetas, puedes crear una carpeta principal llamada: *workarea*, y dentro crear 3 carpetas:
+crearemos esta estructura de carpetas, puedes crear una carpeta principal llamada: *workarea*, y dentro hay crear 3 carpetas:
 ```shell
 ├ workarea
 ├───app-java
