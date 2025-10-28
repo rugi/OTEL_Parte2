@@ -14,6 +14,30 @@ Y, agregaremos un componente principal: Docker.
 Si ya estás familiarizado con Docker, puedes saltarte ese paso e ir directamente a la construcción de la app en java, 
 sino, en Docker 101 tendrás todo el conocimiento necesario para concluir este y todos los ejercicios.
 
+Para mantener separados los componentes y tener organizados mejor nuestro proyecto (además de que és más didactico),
+craremos esta estructura de carpetas, puedes crear una carpeta principal llamada: *workarea*, y dentro crear 3 carpetas:
+```shell
+├ workarea
+├───app-java
+│   └───src
+│       ├───main
+│       │   ├───java
+│       │   │   └───com
+│       │   │       └───example
+│       │   │           └───app_java
+│       │   │               └───controller
+│       │   └───resources
+│       │       ├───static
+│       │       └───templates
+│       └───test
+│           └───java
+│               └───com
+│                   └───example
+│                       └───app_java
+├───jaeger
+├───otel-collector
+```
+
 Tenemos entonces:
 
 ### Componentes
