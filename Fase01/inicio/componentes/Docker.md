@@ -143,7 +143,8 @@ Tenemos claro pues, de que estamos hablando de contenedores.
     
 
 Pero ¿Qué tienen de especial y porqué se usan tanto?
-
+Para contestar esta pregunta, necesitamos primero tener clara la diferencia entre Maquina Virtual y Contenedores.
+Así que, vamos a ello.
 
 ## VM vs Contenedor
 
