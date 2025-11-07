@@ -385,7 +385,7 @@ En resumen:
     Imagen <|-- Contenedor2 : se instancia como
     Imagen <|-- Contenedor3 : se instancia como
 
-    note for Imagen "Analogía POO:\nImagen = Clase"
+    note for Imagen "Analogía POO: Imagen = Clase"
     note for Contenedor "Contenedor = Objeto (instancia)"
 ```
 
