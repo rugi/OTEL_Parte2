@@ -147,21 +147,36 @@ Para contestar esta pregunta, necesitamos primero tener clara la diferencia entr
 Así que, vamos a ello.
 
 ## VM vs Contenedor
-Iniciemos con las máquinas virtuales(VM), cuando usamos una maquina virtual, válgase la redundancia, estamos virtualizando **todo**, es decir, estamos "creando" todo desde los fierros hasta lo que sería una *Layer* abajito del sistema operarivo, para lograr esto, requerimos un: hypervisor.
-El hypervisor es el encargado de abstrar el hardware y esta *Layer* encimita de los fierros.
+Iniciemos con las máquinas virtuales (VM).
+Cuando usamos una máquina virtual —válgase la redundancia— estamos virtualizando **todo**: desde los fierros (el hardware físico) hasta una capa justo debajo del sistema operativo.
 
-¿Te ha pasado que alguna vez quieres crear una VM y tu máquina te dice "ups, aun has activado el hypervisor, por favor activalo."?
-Para eso se requiere el hypervisor.
+Para lograr esto, requerimos un hypervisor.
+El hypervisor es el encargado de abstraer el hardware y crear una capa intermedia que permite que varios sistemas operativos se ejecuten de manera aislada sobre la misma máquina física.
+En otras palabras, controla y reparte los recursos (CPU, memoria, disco, red) entre las distintas máquinas virtuales.
 
-Dadas las características de las máquinas actuales, ya es raro que alguna máquina personal no tenga activado su hypervisor, hace años era común que te toparas con este problema
+¿Te ha pasado que alguna vez intentas crear una VM y tu computadora te dice algo como:
 
+“Ups, aún no has activado la opción que permite usar un hypervisor en esta máquina. Por favor actívala.”
+¿Y no lo hacías porque implicaba entrar al BIOS? 😅
 
-Teniendo el hypervisor, entonces, ya se puede virtualizar un sistema operativo deseado, y éste puede ser distinto al de nuestra máquina personal.
-Así, si nuestra maquina es windows, podemos tener una máquina virtual que tenga linux, y a la inversa.
+En realidad, lo que esa advertencia nos pedía era activar el soporte de virtualización por hardware (Intel VT-x o AMD-V), no instalar un hypervisor.
+Esa opción del BIOS permite que el procesador ejecute instrucciones especiales que hacen posible que un hypervisor funcione de forma eficiente y segura.
 
-Pero, esto tiene un costo, dado que el hypervisor somo abstrae el hardware y un poquito más, requerimos el sistema operativo completo, y, si lo que queremos virtualizar es una aplicación, faltaría el software de esa aplicación más las bibliotecas que usa, tendreoms algo como esto:
+Una vez activada, ya podemos instalar uno.
+VMware, VirtualBox y KVM son ejemplos de hypervisores.
+Hoy en día la mayoría de equipos personales ya tienen esta opción activa por defecto, pero hace algunos años era común toparse con ese mensaje.
 
+En resumen:
 
+*Para crear una máquina virtual se requiere un hypervisor, que es quien se encarga de simular el hardware y aislar los sistemas operativos que corren sobre él.*
+
+Teniendo el hypervisor, podemos virtualizar un sistema operativo completo y hacerlo independiente del de nuestra máquina personal.
+Así, si nuestro equipo usa Windows, podemos tener una máquina virtual con Linux, o viceversa.
+
+Pero esto tiene un costo: al virtualizar todo el hardware, también necesitamos instalar el sistema operativo completo dentro de la VM para poder usarla.
+Después de eso, debemos instalar el software que queremos utilizar (binarios), y las bibliotecas (libs) que se requiere para ejecutar por ejemplo una aplicación (App 1)
+
+Al final tendríamos algo como:
 
 ```mermaid
 graph TB
@@ -199,6 +214,7 @@ Básicamente, tienes una ballena nadando dentro de tu máquina personal.
 
 ¿Y un contenedor?
 
+Ahora bien, si lo que queremos “virtualizar” no es todo un sistema, sino solo una aplicación específica (App A), basta con aislar su propio entorno: su software, sus binarios y las bibliotecas que utiliza.
 
 ```mermaid
 graph TB
