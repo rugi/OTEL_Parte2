@@ -405,6 +405,8 @@ Listo, tenemos ya la imagen, ahora sí, ejecutemos un contenedor, tambien acá h
 ### Ejemplo práctico
 #### Ngnix.
 
+#### Otros comandos útiles
+
 ## Crear imágenes
 
 Si bien el hecho de tener acceso a un repositorio con muchas imágenes es una gran ventaja para agilizar el desarrollo, El verdadero potencial de los contenedores es que podemos crear nuestras propias imágenes.
