@@ -344,4 +344,27 @@ graph TB
 ```
 
 ## Docker
+Docker es el "Container Runtime" más popular y es el que usaremos en estos laboratorios, no es el único, eso ya debes tenerlo claro, pero sí es el más popular y difundido; es * la norma de facto* dirían los libros.
+
+### Instalación.
+Idealmente, docker se utiliza en máquinas linux, pero, nada nos impide usarlo en Windows.
+No revisaremos la instalación, hay muchas guías en internet que te llevan literalmente de la mano, para poder instalar docker, así que asumiremos que ya lo tienes instalado.
+
+### Validación.
+Algo que haremos mucho en estos laboratorios es agregar un paso para validar, esto nos ayudará a saber que vamos bien o si es necesario revisar y repetir algun paso.
+¿Cómo saber si tengo ya listo docker en mi maquina personal?
+
+#### Revisa la versión.
+
+
+#### Ejecuta un par de comandos
+
+
+#### Ejecuta un contenedor
+
+
+### Todo ok
+
+
+### Ejemplo práctico
 
