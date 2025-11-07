@@ -257,7 +257,12 @@ graph TB
 ```
 
 
-Comparación:
+### Comparación
+
+Entonces, para los contenedores, solo requerimos un "Container Runtime" todo lo demás lo da nuestra maquina host, nos ahorramos: el hypervisor y el SO Guest.
+Nos ahorramos las partes más costosas, por eso es que son tan ligeros.
+
+¿Queda más claro ahora cierto?
 
 
 ```mermaid
@@ -337,3 +342,6 @@ graph TB
     style C_Bins2 fill:#ffeecc
     style C_Bins3 fill:#ffeecc
 ```
+
+## Docker
+
