@@ -31,6 +31,8 @@ Tenemos entonces:
 * <a href="componentes/Docker.md">Docker 101</a>. Todo lo que debes saber de Docker para completar este y los siguientes ejercicios.
 #### Aplicacion Java.
 * <a href="componentes/Java.md">Aplicación java</a>. La aplicación java que usaremos de ejemplo.
+* Contenerizacion. Crear un contenedor para nuestra aplicación java.
+* Docker compose. Ahora, aprenderemos a usar docker compose.
 #### Otel-Collector.
 * <a href="componentes/OtelCollector.md">OTEL Collector</a>. La configuración del servidor Collector.
 #### Jaeger.
