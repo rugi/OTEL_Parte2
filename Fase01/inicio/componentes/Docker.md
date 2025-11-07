@@ -147,6 +147,7 @@ Para contestar esta pregunta, necesitamos primero tener clara la diferencia entr
 Así que, vamos a ello.
 
 ## VM vs Contenedor
+### VM
 Iniciemos con las máquinas virtuales (VM).
 Cuando usamos una máquina virtual —válgase la redundancia— estamos virtualizando **todo**: desde los fierros (el hardware físico) hasta una capa justo debajo del sistema operativo.
 
@@ -211,6 +212,7 @@ graph TB
 Por eso las máquinas virtuales suelen ser tan pesadas: 5 GB, 10 GB o incluso más.
 Usar una VM tiene sentido cuando queremos ejecutar una aplicación de Windows en una máquina Linux, o a la inversa.
 
+### Contenedores
 ¿Y un contenedor?
 
 Aquí es donde entra la gran pregunta:
