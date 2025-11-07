@@ -412,5 +412,5 @@ Listo, tenemos ya la imagen, ahora sí, ejecutemos un contenedor, tambien acá h
 Si bien el hecho de tener acceso a un repositorio con muchas imágenes es una gran ventaja para agilizar el desarrollo, El verdadero potencial de los contenedores es que podemos crear nuestras propias imágenes.
 Pero, eso lo veremos de manera práctica en la siguiente parte de este laboratorio:
 * Crear una imagen de una app java.
-* 
+
 Regresa al indice y continua con el siguiente paso.
