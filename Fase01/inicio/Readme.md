@@ -31,6 +31,7 @@ Tenemos entonces:
 * <a href="componentes/Docker.md">Docker 101</a>. Todo lo que debes saber de Docker para completar este y los siguientes ejercicios.
 #### Aplicacion Java.
 * <a href="componentes/Java.md">Aplicación java</a>. La aplicación java que usaremos de ejemplo.
+#### Docker. Siguientes pasos.  
 * Contenerizacion. Crear un contenedor para nuestra aplicación java.
 * Docker compose. Ahora, aprenderemos a usar docker compose.
 #### Otel-Collector.
@@ -46,12 +47,14 @@ estamos usando Docker compose y, todo está ya funcionando.
 
 Ahora lo que sigue es, ponerlos a trabajar en conjunto, para ello, realizaremos los siguientes ajustes:
 
-
+* Conectando todo.
 -------
 
 ### Ultimos detalles.
 
 Tenemos todo listo, entonces, hagamos una ultima validación antes de ponernos a analizar lo que podemos obtener de nuestro stack inicial de observabilidad.
+
+* Smoke test.
 
 -------
 
@@ -59,6 +62,6 @@ Tenemos todo listo, entonces, hagamos una ultima validación antes de ponernos a
 Listo.
 
 Revisemos Jaeger.
-
+* Revisión de trazas.
 -------
 
