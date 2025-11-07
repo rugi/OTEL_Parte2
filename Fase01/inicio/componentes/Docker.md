@@ -174,7 +174,7 @@ Teniendo el hypervisor, podemos virtualizar un sistema operativo completo y hace
 Así, si nuestro equipo usa Windows, podemos tener una máquina virtual con Linux, o viceversa.
 
 Pero esto tiene un costo: al virtualizar todo el hardware, también necesitamos instalar el sistema operativo completo dentro de la VM para poder usarla.
-Después de eso, debemos instalar el software que queremos utilizar (binarios), y las bibliotecas (libs) que se requiere para ejecutar por ejemplo una aplicación (App 1)
+Después de eso, debemos instalar el software que queremos utilizar (binarios), y las bibliotecas (libs) que se requiere para ejecutar por ejemplo una aplicación (App A)
 
 Al final tendríamos algo como:
 
@@ -208,13 +208,26 @@ graph TB
         VM_HostOS --> VM_Infrastructure
     end
 ```
-Por eso es que las VM son tan grandes, 5GB, 10GB, 20GB, etc.
-
-Básicamente, tienes una ballena nadando dentro de tu máquina personal.
+Por eso las máquinas virtuales suelen ser tan pesadas: 5 GB, 10 GB o incluso más.
+Usar una VM tiene sentido cuando queremos ejecutar una aplicación de Windows en una máquina Linux, o a la inversa.
 
 ¿Y un contenedor?
 
-Ahora bien, si lo que queremos “virtualizar” no es todo un sistema, sino solo una aplicación específica (App A), basta con aislar su propio entorno: su software, sus binarios y las bibliotecas que utiliza.
+Aquí es donde entra la gran pregunta:
+
+¿Por qué tengo una *ballena* viviendo dentro de mi computadora si lo que quiero es virtualizar una app en Linux, y mi máquina ya es Linux?
+
+Justamente para eso existen los contenedores.
+Si lo que necesitamos “virtualizar” no es todo un sistema operativo, sino una sola aplicación (App A), basta con aislar su propio entorno:
+
+* Su software
+* Sus binarios
+* Las bibliotecas que utiliza
+
+Todo lo demás —hardware y sistema operativo— ya existen en el host, por lo tanto no necesitamos volver a empaquetarlos.
+Esa es la clave: los contenedores aprovechan el sistema operativo existente y solo aíslan lo estrictamente necesario para que la aplicación funcione igual, sin importar dónde se ejecute.
+
+Ahora sería algo así:
 
 ```mermaid
 graph TB
