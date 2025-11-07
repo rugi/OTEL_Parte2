@@ -249,30 +249,7 @@ graph TB
         C_HostOS --> C_Infrastructure
     end
     
-    style VM_OS1 fill:#ff9999
-    style VM_OS2 fill:#ff9999
-    style VM_OS3 fill:#ff9999
-    style VM_Hypervisor fill:#ffcc99
-    style VM_HostOS fill:#99ccff
-    style VM_Infrastructure fill:#cccccc
-    
-    style C_Runtime fill:#99ff99
-    style C_HostOS fill:#99ccff
-    style C_Infrastructure fill:#cccccc
-    
-    style VM_App1 fill:#ffffcc
-    style VM_App2 fill:#ffffcc
-    style VM_App3 fill:#ffffcc
-    style VM_Bins1 fill:#ffeecc
-    style VM_Bins2 fill:#ffeecc
-    style VM_Bins3 fill:#ffeecc
-    
-    style C_App1 fill:#ffffcc
-    style C_App2 fill:#ffffcc
-    style C_App3 fill:#ffffcc
-    style C_Bins1 fill:#ffeecc
-    style C_Bins2 fill:#ffeecc
-    style C_Bins3 fill:#ffeecc
+
 ```
 
 
