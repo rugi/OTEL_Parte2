@@ -366,6 +366,28 @@ En resumen:
 * La imagen (Image) define la estructura, dependencias y comportamiento → como una clase.
 * El contenedor (Container) es una instancia viva y aislada de esa definición → como un objeto en ejecución.
 * Puedes crear muchas instancias (contenedores) a partir de una sola clase (imagen).
+  
+```mermaid
+  classDiagram
+    class Imagen {
+        +Base: SO + dependencias
+        +App: código + configuración
+        +define() : entorno de ejecución
+    }
+
+    class Contenedor {
+        +Estado: en ejecución
+        +Datos temporales
+        +Aislamiento de procesos
+    }
+
+    Imagen <|-- Contenedor : se instancia como
+    Imagen <|-- Contenedor2 : se instancia como
+    Imagen <|-- Contenedor3 : se instancia como
+
+    note for Imagen "Analogía POO:\nImagen = Clase"
+    note for Contenedor "Contenedor = Objeto (instancia)"
+```
 
 Docker tiene un repositorio de imágenes, no de contenedores, nosotros descargamos la imagen en nuestra maquina personal, y la ejecutamos, al ejecutarla tenemos un contenedor.
 Sencillo.
