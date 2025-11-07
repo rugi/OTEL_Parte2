@@ -410,4 +410,4 @@ Si bien el hecho de tener acceso a un repositorio con muchas imágenes es una gr
 Pero, eso lo veremos de manera práctica en la siguiente parte de este laboratorio:
 * Crear una imagen de una app java.
 
-Regresa al indice y continua con el siguiente paso.
+Regresa al <a href="../Readme.md">indice</a> y continua con el siguiente paso.
