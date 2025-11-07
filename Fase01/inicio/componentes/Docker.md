@@ -353,6 +353,38 @@ Algo que haremos mucho en estos laboratorios es agregar un paso para validar, es
 
 #### Revisa la versión.
 
+
+```bash
+[rugi@bigoze ~]$ docker version
+Client: Docker Engine - Community
+ Version:           28.5.0
+ API version:       1.51
+ Go version:        go1.24.7
+ Git commit:        887030f
+ Built:             Thu Oct  2 14:57:16 2025
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          28.5.0
+  API version:      1.51 (minimum version 1.24)
+  Go version:       go1.24.7
+  Git commit:       cd04830
+  Built:            Thu Oct  2 14:54:15 2025
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          v1.7.28
+  GitCommit:        b98a3aace656320842a23f4a392a33f46af97866
+ runc:
+  Version:          1.3.0
+  GitCommit:        v1.3.0-0-g4ca628d1
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+```
+
 ### Imagen y contenedor
 Antes de pasar al siguiente paso, es importante que tengamos clara la diferencia entre IMAGEN y CONTENEDOR.
 
