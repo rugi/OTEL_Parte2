@@ -356,15 +356,37 @@ Algo que haremos mucho en estos laboratorios es agregar un paso para validar, es
 
 #### Revisa la versión.
 
+### Imagen y contenedor
+Antes de pasar al siguiente paso, es importante que tengamos clara la diferencia entre IMAGEN y CONTENEDOR.
+
+Una Imagen es la plantilla para generar un contenedor, podemos verlo así: Un contenedor es una imagen en ejecución, y, puedo generar muchos contenedores de la misma plantilla. Haciendo una analogía con la POO: "La imagen es la clase, los contenedores son las instancias de esa clase
+
+En resumen:
+
+* La imagen (Image) define la estructura, dependencias y comportamiento → como una clase.
+* El contenedor (Container) es una instancia viva y aislada de esa definición → como un objeto en ejecución.
+* Puedes crear muchas instancias (contenedores) a partir de una sola clase (imagen).
+
+Docker tiene un repositorio de imágenes, no de contenedores, nosotros descargamos la imagen en nuestra maquina personal, y la ejecutamos, al ejecutarla tenemos un contenedor.
+Sencillo.
 
 #### Ejecuta un par de comandos
+Entonces, para tener un contenedor, primero debemos tener su imagen.
 
+Ejecutemos:
 
 #### Ejecuta un contenedor
-
+Listo, tenemos ya la imagen, ahora sí, ejecutemos un contenedor, tambien acá hay : "Hola Mundo"
 
 ### Todo ok
 
-
 ### Ejemplo práctico
+#### Ngnix.
 
+## Crear imágenes
+
+Si bien el hecho de tener acceso a un repositorio con muchas imágenes es una gran ventaja para agilizar el desarrollo, El verdadero potencial de los contenedores es que podemos crear nuestras propias imágenes.
+Pero, eso lo veremos de manera práctica en la siguiente parte de este laboratorio:
+* Crear una imagen de una app java.
+* 
+Regresa al indice y continua con el siguiente paso.
