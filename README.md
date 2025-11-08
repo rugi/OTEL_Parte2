@@ -1,6 +1,8 @@
 # Laboratorio Técnico de Observabilidad con OpenTelemetry
 
-¡Bienvenido a este laboratorio técnico progresivo sobre observabilidad! Aquí encontrarás una guía paso a paso que explora cómo integrar **trazas, logs y métricas** en un entorno local usando tecnologías modernas como **OpenTelemetry, Loki, Promtail, Fluent Bit, Grafana, Tempo y MinIO**, todo orquestado desde `docker-compose`.
+¡Bienvenido a este laboratorio técnico progresivo sobre observabilidad! 
+
+Aquí encontrarás una guía paso a paso que explora cómo integrar **trazas, logs y métricas** en un entorno local usando tecnologías modernas como **OpenTelemetry, Loki, Promtail, Fluent Bit, Grafana, Tempo y MinIO**, todo orquestado desde `docker-compose`.
 
 ## 🧭 Propósito del Proyecto
 
@@ -13,22 +15,20 @@ Este laboratorio tiene varios objetivos clave:
 ## ✍️ Filosofía del Contenido
 
 - Todo está redactado en tono **didáctico** y **amigable**, sin pretensiones de ser contenido académico, pero tampoco superficial.
-- Si buscas una referencia rápida, mejor un TikTok o reel. Si buscas profundidad académica, mejor un libro. Este laboratorio está en medio: **serio pero accesible**.
+- Si buscas una referencia rápida, es mejor un TikTok o un reel. Si buscas profundidad académica, busca mejor un libro. Este laboratorio está en medio: **serio pero accesible**.
 - Si ves algo mejorable, **por favor abre un issue**. Estoy abierto a feedback y mejoras.
-- Este proyecto se entrega **"as is"**, sin garantía de finalización, pero con mucha buena voluntad y consistencia.
+- Este proyecto se entrega **"as is"**, sin garantía de finalización, pero con mucha buena voluntad y (deseos de) consistencia.
 
 ## 📚 Material Complementario
 
-Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado, al final de todas las fases, pondré un listado final de todos los 101 dentro de todo este material
-
-Otros temas básicos tendrán su espacio más adelante.
+Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado, al final de todas las fases, pondré un listado final de todos los 101 dentro de todo este material. Otros temas básicos tendrán su espacio más adelante.
 
 ## 🧱 Fases del Laboratorio
 
-```markdown
+```
 | Fase     | Objetivo                                                                 | Stack principal                                                | Estatus       |
 |----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|
-| <a href="Fase01/Readme.md">Fase 01</a>  | Instrumentar trazas usando agente automático de OpenTelemetry           | OpenTelemetry Collector, app-java, Jaeger                      | ✅ Completa   |
+| Fase 01  | Instrumentar trazas usando agente automático de OpenTelemetry           | OpenTelemetry Collector, app-java, Jaeger                      | ✅ Completa   |
 | Fase 02  | Recolección y visualización de logs desde contenedores Docker           | Loki, Fluent Bit, Grafana                                      | ✅ Completa   |
 | Fase 02b | Agregar etiquetas útiles en logs y migrar recolección con Promtail      | Promtail, Loki, Grafana                                        | 🔄 En revisión |
 | Fase 03  | Integrar métricas con Prometheus y visualizarlas en Grafana             | Prometheus, OpenTelemetry Collector, Grafana                   | 🚧 Pendiente  |
