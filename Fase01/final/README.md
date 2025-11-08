@@ -244,11 +244,12 @@ Vemos 3 contenedores ejecutandose, entonces, validado todo OK.
 ---
 
 ## 🚀 Resultado esperado
+- Abre Jaeger, debe estar todo limpio: [http://localhost:16686](http://localhost:16686)
+- Ejecutar `curl http://localhost:8080/pago` o pega la URL en un browser, invoca varias veces.
+- Regresa a Jaeger, debes ver ahora las trazas reflejadas en [http://localhost:16686](http://localhost:16686)
+- Seleccionar el servicio `app-java` en Jaeger y explorar los spans generados.
 
-- Ejecutar `curl http://localhost:8080/pago`
-- Ver las trazas reflejadas en [http://localhost:16686](http://localhost:16686)
-- Seleccionar el servicio `app-java` en Jaeger y explorar los spans generados
-
+Listo, estás capturando traces con intrumentación automática de OpenTelemetry.
 ---
 
 ## 🔍 Conceptos aplicados
