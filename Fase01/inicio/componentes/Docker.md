@@ -636,9 +636,22 @@ Abre tu navegador en el puerto 8080, deberás ver algo como esto:
 
 Felicitaciones, has ejecutado tu primer contenedor.
 
-
-
 #### Otros comandos útiles
+Algunos otros comandos que debes conocer son:
+`docker stop _container_id_`
+
+Deten el contenedor de ngnix, primero listamos los contenedores disponibles, vemos su containerid, y con ese valor, podemos detenerlo.
+
+```console 
+%> docker container ls
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
+3c42feb7c36f   nginx:1.29.3   "/docker-entrypoint.…"   15 minutes ago   Up 15 minutes   0.0.0.0:8080->80/tcp   clever_pasteur
+
+%> docker stop 3c42feb7c36f
+3c42feb7c36f
+```
+Para efectos de estos laboratorios, puedes consultar más comandos de docker aquí:
+[../../../ext/](../../../ext/)
 
 ## Crear imágenes
 
