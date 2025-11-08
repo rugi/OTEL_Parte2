@@ -632,7 +632,7 @@ D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]>
 Verás que hay un contenedor vivo.
 
 Abre tu navegador en el puerto 8080, deberás ver algo como esto:
-
+![Nuestro contenedor de ngnix](ngnix.png "Nuestro contenedor de ngnix")
 
 Felicitaciones, has ejecutado tu primer contenedor.
 
