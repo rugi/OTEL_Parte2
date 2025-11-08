@@ -487,6 +487,8 @@ Ok, regresando a nuestro objetivo inmediato. Ejecutemos nuestro "Hola mundo" en 
 
 Lo siguiente que debemos saber es que, toda imagen tiene un nombre y un tag, acostumbrate a decir tag y no versión, tiene más sentido (después descubrirás porqué).
 Cada que usemos una imagen, debemos acostumbrar a decir cual tag estamos usando de esa imagen, eso es para ubicar la imagen precisa que se utiliza.
+
+
 Conforme pasa el tiempo, las imagenes van mejorando o van teniendo cambios y, van saliendo más tags, a veces el tag es numerico, y nos ayuda para poder darle la equivalencia de "versión", pero
 no siempre es asì, por ello, como mencionaba, procura mejor decir: estoy usando la imagen X, con el tag Y.
 
