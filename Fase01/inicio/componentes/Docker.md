@@ -222,6 +222,7 @@ Si lo que necesitamos “virtualizar” no es todo un sistema operativo, sino un
 * Su software
 * Sus binarios
 * Las bibliotecas que utiliza
+* Puertos que utiliza e incluso las redes que utiliza (esto tiene sus bemoles, pero, podemos por el momento abstraerlo así)
 
 Todo lo demás —hardware y sistema operativo— ya existen en el host, por lo tanto no necesitamos volver a empaquetarlos.
 Esa es la clave: los contenedores aprovechan el sistema operativo existente y solo aíslan lo estrictamente necesario para que la aplicación funcione igual, sin importar dónde se ejecute.
@@ -655,7 +656,8 @@ Para efectos de estos laboratorios, puedes consultar más comandos de docker aqu
 
 ## Crear imágenes
 
-Si bien el hecho de tener acceso a un repositorio con muchas imágenes es una gran ventaja para agilizar el desarrollo, El verdadero potencial de los contenedores es que podemos crear nuestras propias imágenes.
+Si bien el hecho de tener acceso a un CR con muchas imágenes es una gran ventaja para agilizar el desarrollo, el verdadero potencial de los contenedores es que podemos crear nuestras propias imágenes.
+
 Pero, eso lo veremos de manera práctica en la siguiente parte de este laboratorio:
 * Crear una imagen de una app java.
 
