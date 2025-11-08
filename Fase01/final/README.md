@@ -280,7 +280,7 @@ D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker-compose down
 
 Listo. Todo detenido.
 Si quieres conocer que más instrucciones puedes ejecutar, revisa otras operaciones que te pueden ayudar en este camino de aprendizaje:
-[Otras operaciones útiles](../ext/lab-operaciones-extendido.md)
+[Otras operaciones útiles](../../ext/lab-operaciones-extendido.md)
 
 ## 📘 Próxima fase (Fase 2)
 
