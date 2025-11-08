@@ -74,6 +74,11 @@ graph TD
 
 ---
 
+## 🚀 Puesta en marcha.
+
+
+---
+
 ## 🚀 Resultado esperado
 
 - Ejecutar `curl http://localhost:8080/pago`
