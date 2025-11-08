@@ -586,7 +586,7 @@ flowchart LR
 
     subgraph Docker ["Contenedor Nginx"]
         B -->|Mapeo de puertos 8080:80| C["Puerto 80"]
-        C --> D["Servidor Nginx (nginx:1.29.3)"]
+        C --> D["Servidor Nginx nginx:1.29.3"]
     end
 
     style Host fill:#f0f9ff,stroke:#60a5fa,stroke-width:2px
