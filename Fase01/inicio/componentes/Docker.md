@@ -436,7 +436,7 @@ como sugerencia, crea un archivo de notas, con estos comandos, serán tu dìa a 
 ##### Listar imágenes disponbles
 
 Ejecutemos:
-```mermaid
+```console
 D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker images
 REPOSITORY                                    TAG       IMAGE ID       CREATED         SIZE
 neondatabase/neon_local                       v1        8e8892d2a674   6 weeks ago     475MB
