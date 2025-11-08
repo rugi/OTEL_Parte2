@@ -24,8 +24,7 @@ Este laboratorio tiene varios objetivos clave:
 Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado, al final de todas las fases, pondré un listado final de todos los 101 dentro de todo este material. Otros temas básicos tendrán su espacio más adelante.
 
 ## 🧱 Fases del Laboratorio
-
-```
+ 
 | Fase     | Objetivo                                                                 | Stack principal                                                | Estatus       |
 |----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|
 | Fase 01  | Instrumentar trazas usando agente automático de OpenTelemetry           | OpenTelemetry Collector, app-java, Jaeger                      | ✅ Completa   |
@@ -36,7 +35,7 @@ Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de dock
 | Fase 05  | Bonus: Dashboards como código utilizando PERSES                         | PERSES, Grafana, OTel, Loki, Prometheus                        | 🚧 Pendiente  |
 | Fase 06  | Persistencia distribuida de logs                                         | Loki + MinIO (S3-like backend), Docker volumes                 | 🚧 Pendiente  |
 | Fase 07  | Persistencia distribuida de trazas                                       | Tempo + MinIO, Jaeger, OTel Collector                          | 🚧 Pendiente  |
-```
+ 
 
 ## 🎤 Próximas Charlas
 
