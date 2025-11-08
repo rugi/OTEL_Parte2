@@ -651,7 +651,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS  
 3c42feb7c36f
 ```
 Para efectos de estos laboratorios, puedes consultar más comandos de docker aquí:
-[../../../ext/](../../../ext/)
+[../../ext/lab-operaciones-extendido.md](../../ext/lab-operaciones-extendido.md)
 
 ## Crear imágenes
 
