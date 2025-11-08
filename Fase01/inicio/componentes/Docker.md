@@ -347,6 +347,10 @@ Docker es el "Container Runtime" más popular y es el que usaremos en estos labo
 Idealmente, docker se utiliza en máquinas linux, pero, nada nos impide usarlo en Windows.
 No revisaremos la instalación, hay muchas guías en internet que te llevan literalmente de la mano, para poder instalar docker, así que asumiremos que ya lo tienes instalado.
 
+Estos 2 videos están muy completos y detallados:
+* Windows: [https://www.youtube.com/watch?v=AxBQFrHK35c](https://www.youtube.com/watch?v=AxBQFrHK35c)
+* Linux: []()
+
 ### Validación.
 Algo que haremos mucho en estos laboratorios es agregar un paso para validar, esto nos ayudará a saber que vamos bien o si es necesario revisar y repetir algun paso.
 ¿Cómo saber si tengo ya listo docker en mi maquina personal?
