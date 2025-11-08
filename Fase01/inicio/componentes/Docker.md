@@ -349,7 +349,7 @@ No revisaremos la instalación, hay muchas guías en internet que te llevan lite
 
 Estos 2 videos están muy completos y detallados:
 * Windows: [https://www.youtube.com/watch?v=AxBQFrHK35c](https://www.youtube.com/watch?v=AxBQFrHK35c)
-* Linux: []()
+* Linux: [https://www.youtube.com/watch?v=SROEpSKCoBQ](https://www.youtube.com/watch?v=SROEpSKCoBQ)
 
 ### Validación.
 Algo que haremos mucho en estos laboratorios es agregar un paso para validar, esto nos ayudará a saber que vamos bien o si es necesario revisar y repetir algun paso.
