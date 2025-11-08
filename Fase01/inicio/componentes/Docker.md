@@ -477,16 +477,166 @@ Para no perder la costumbre, tambien tenemos un contenedor "Hola Mundo".
 
 Todas las imágenes que no sean creadas por nosotros (sí, también podemos crear imágenes y, es el verdadero potencial de los contenedores), deben vivir en un repositorio.
 A estos repositorios se les llama:registro de contenedores (`container registry` en inglés), agrega esto a tu vocabulario para este tema, es algo que debes tener presente siempre.
-Docker tiene un `container registry` público, desde ahi se descargan la mayoría de imágenes, pero, no es el único, conforme uses de manera profesional los contenedores, descubrirás que hay `container registry` privados; AWS, RedHat, Oracle, Azure, todos ellos tienen `container registry` pero, por ahora te sirve saber que usaremos el `container registry` público de Docker.
+Docker tiene un `container registry` público, desde ahi se descargan la mayoría de imágenes, pero, no es el único, conforme uses de manera profesional los contenedores, descubrirás que hay `container registry` privados.
+
+AWS, RedHat, Oracle, Azure, todos ellos tienen `container registry` pero, por ahora te sirve saber que usaremos el `container registry` público de Docker.
 Y digo `container registry` público ya que también los hay privados, ahi requerirás usuario y password.
 
 Ok, regresando a nuestro objetivo inmediato. Ejecutemos nuestro "Hola mundo" en contenedores.
 
+Lo siguiente que debemos saber es que, toda imagen tiene un nombre y un tag, acostumbrate a decir tag y no versión, tiene más sentido (después descubrirás porqué).
+Cada que usemos una imagen, debemos acostumbrar a decir cual tag estamos usando de esa imagen, eso es para ubicar la imagen precisa que se utiliza.
+Conforme pasa el tiempo, las imagenes van mejorando o van teniendo cambios y, van saliendo más tags, a veces el tag es numerico, y nos ayuda para poder darle la equivalencia de "versión", pero
+no siempre es asì, por ello, como mencionaba, procura mejor decir: estoy usando la imagen X, con el tag Y.
+
+Si no se especifica el tag, existe un tag por default, llamado: `latest` muy util para pruebs rápidas o para probar que hay de nuevo, pero, no lo uses en ambientes productivos.
+El  `latest` de hoy, no será el mismo  `latest` dentro de un mes.
+
+Continuemos:
+Este es el `container registry` público de Docker.
+[https://hub.docker.com/](https://hub.docker.com/)
+
+
+Y, esta es la imagen que vamos a ejecutar:
+[https://hub.docker.com/_/hello-world/](https://hub.docker.com/_/hello-world/)
+
+Puede ver que tiene un montón de tags, y por ahi verás el tag `latest`.
+
+Para poner en marcha un contenedor, solo debemos hacer lo siguiente:
+`docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
+
+Para nuestro ejercicio, será:
+`docker run hello-world`
+
+No estamos especificando el tag, asì que, estamos realmente usando la imagen hello-world con el tag: latest.
+
+Ejemplo de salida.
+```console
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+```
+
+Con este contenedor podemos casi garantizar que tu instalación de Docker está completamente funcional.
+Si no has obtenido esa salida, revisa el error y repite el proceso de instalación.
 
 ### Todo ok
+Si sí obtuviste el resultado mostrado, felicitaciones, estás listo para continuar.
+
+hello-world es un contendor sencillo, solo muestra información, no trae nada màs empaquetado y; muestra un mensaje y se termina, es decir, 
+termina su ejecución después de mostrar el mensaje.
+
+Asì, si vuelves a ejecutar:
+
+```console
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+Seguirás viendo vacía la lista, ya que nuestro contenedor ya se terminó de ejecutar.
 
 ### Ejemplo práctico
+Pasemos ahora a ver algo más práctico, probemos la imagen de ngnix
+
 #### Ngnix.
+La imagen de ngnix en el CR de Docker es esta:
+[https://hub.docker.com/_/nginx](https://hub.docker.com/_/nginx)
+
+Usaremos el tag: 1.29.3
+
+Esta es la línea que ejecutaremos:
+ `docker run -d -p 8080:80 nginx:1.29.3`
+
+ | Parámetro | Detalle |
+|------------|----------|
+| `docker run` | Inicia un nuevo contenedor a partir de una imagen. |
+| `-d` | Ejecuta el contenedor en modo **detached** (en segundo plano). |
+| `-p 8080:80` | Mapea el **puerto 8080** del host al **puerto 80** del contenedor. Es decir, podrás acceder al servicio en `http://localhost:8080`. |
+| `nginx:1.29.3` | Especifica la **imagen** y la **etiqueta (versión)** que se usará. En este caso, la versión 1.29.3 de Nginx. |
+
+Quizá lo que más te llame la atenciòn es el parametro -p, es sencillo de interpretar, es un mapeo de puertos entre nuestra maquina y el contenedor.
+primero va nuestro puerto, luego el del contenedor, es decir, lo que el contenedor mapèe en el puerto 80 (del contenedor), mapealo al puerto 8080 de mi maquina.
+
+
+```mermaid
+flowchart LR
+    subgraph Host ["Máquina Host (Tu PC)"]
+        A["Cliente (Navegador)"]
+        A -->|http://localhost:8080| B["Puerto 8080"]
+    end
+
+    subgraph Docker ["Contenedor Nginx"]
+        B -->|Mapeo de puertos (-p 8080:80)| C["Puerto 80"]
+        C --> D["Servidor Nginx (nginx:1.29.3)"]
+    end
+
+    style Host fill:#f0f9ff,stroke:#60a5fa,stroke-width:2px
+    style Docker fill:#fef9c3,stroke:#eab308,stroke-width:2px
+    style A fill:#dbeafe,stroke:#3b82f6
+    style B fill:#bfdbfe,stroke:#2563eb
+    style C fill:#fef08a,stroke:#ca8a04
+    style D fill:#fde68a,stroke:#ca8a04
+```
+
+Interpretación:
+* 8080 → puerto del host, es decir, el que usas en el navegador.
+* 80 → puerto interno del contenedor, donde escucha Nginx.
+* El tráfico HTTP se redirige automáticamente gracias al parámetro -p.
+
+
+Viendo todo en acción es mas sencillo.
+```console
+%> docker run -d -p 8080:80 nginx:1.29.3
+Unable to find image 'nginx:1.29.3' locally
+1.29.3: Pulling from library/nginx
+d7ecded7702a: Pull complete
+266626526d42: Pull complete
+320b0949be89: Pull complete
+d921c57c6a81: Pull complete
+9def903993e4: Pull complete
+52bc359bcbd7: Pull complete
+e2f8e296d9df: Pull complete
+Digest: sha256:1beed3ca46acebe9d3fb62e9067f03d05d5bfa97a00f30938a0a3580563272ad
+Status: Downloaded newer image for nginx:1.29.3
+3c42feb7c36f897cf8cbc9b9e22fab6a4b22c16df774d51a10dd475da781a2b2
+```
+
+ Observa como, al no tener la imagen localmente, primero se descarga.
+
+ Ahora sí, si ejecutas:
+```console 
+%> docker container ls
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
+3c42feb7c36f   nginx:1.29.3   "/docker-entrypoint.…"   8 minutes ago   Up 8 minutes   0.0.0.0:8080->80/tcp   clever_pasteur
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]>
+```
+Verás que hay un contenedor vivo.
+
+Abre tu navegador en el puerto 8080, deberás ver algo como esto:
+
+
+Felicitaciones, has ejecutado tu primer contenedor.
+
+
 
 #### Otros comandos útiles
 
