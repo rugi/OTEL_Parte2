@@ -263,6 +263,25 @@ Listo, estás capturando traces con intrumentación automática de OpenTelemetry
 
 ---
 
+## Detener todo.
+
+Puedes detener todo de la siguiente forma:
+### Ventana CLI 02
+
+Ejecuta:
+```console
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker-compose down
+[+] Running 4/4
+ ✔ Container app-java                Removed                                                                                                                                             10.5s
+ ✔ Container otel-collector          Removed                                                                                                                                              0.4s
+ ✔ Container jaeger                  Removed                                                                                                                                              0.4s
+ ✔ Network final_observabilidad-net  Removed                                                                                                                                              0.3s
+```
+
+Listo. Todo detenido.
+Si quieres conocer que más instrucciones puedes ejecutar, revisa otras operaciones que te pueden ayudar en este camino de aprendizaje:
+[../ext/lab-operaciones-extendido.md](Otras operaciones útiles)
+
 ## 📘 Próxima fase (Fase 2)
 
 > Integración de logs distribuidos y correlación de trazas con herramientas como Loki o Fluent Bit.
