@@ -341,7 +341,7 @@ graph TB
 ```
 
 ## Docker
-Docker es el "Container Runtime" más popular y es el que usaremos en estos laboratorios, no es el único, eso ya debes tenerlo claro, pero sí es el más popular y difundido; es * la norma de facto* dirían los libros.
+Docker es el "Container Runtime" más popular y es el que usaremos en estos laboratorios, no es el único, eso ya debes tenerlo claro, pero sí es el más popular y difundido; es _la norma de facto_ dirían los libros.
 
 ### Instalación.
 Idealmente, docker se utiliza en máquinas linux, pero, nada nos impide usarlo en Windows.
@@ -388,12 +388,12 @@ Server: Docker Engine - Community
 ### Imagen y contenedor
 Antes de pasar al siguiente paso, es importante que tengamos clara la diferencia entre IMAGEN y CONTENEDOR.
 
-Una Imagen es la plantilla para generar un contenedor, podemos verlo así: Un contenedor es una imagen en ejecución, y, puedo generar muchos contenedores de la misma plantilla. Haciendo una analogía con la POO: "La imagen es la clase, los contenedores son las instancias de esa clase
+Una Imagen(`image`) es la plantilla para generar un contenedor(`container`), podemos verlo así: Un contenedor es una imagen en ejecución, y, puedo generar muchos contenedores de la misma plantilla. Haciendo una analogía con la POO: _"La imagen es la clase, los contenedores son las instancias de esa clase"_
 
 En resumen:
 
-* La imagen (Image) define la estructura, dependencias y comportamiento → como una clase.
-* El contenedor (Container) es una instancia viva y aislada de esa definición → como un objeto en ejecución.
+* La imagen (`image`) define la estructura, dependencias y comportamiento → como una clase.
+* El contenedor (`container`) es una instancia viva y aislada de esa definición → como un objeto en ejecución.
 * Puedes crear muchas instancias (contenedores) a partir de una sola clase (imagen).
   
 ```mermaid
