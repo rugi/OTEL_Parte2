@@ -84,12 +84,12 @@ En ambos casos, colocate en este misma carpeta.
 Ejecuta:
 
 ```console
-OTEL_Parte2\Fase01\final [main ≡]> docker compose up
+%> docker compose up
 ```
 
 Te aparecerá algo como lo siguiente:
 ```console
-D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker compose up
+%> docker compose up
 [+] Running 4/4
  ✔ Network final_observabilidad-net  Created                                                                                                                                              0.0s
  ✔ Container jaeger                  Created                                                                                                                                              0.1s
@@ -231,7 +231,7 @@ Si ves logs similares, todo está OK, pero validemos.
 
 Ejecuta, para ver que contenedores están en ejecución:
 ```console
-D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker ps
+%> docker ps
 CONTAINER ID   IMAGE                                         COMMAND                  CREATED         STATUS         PORTS                                                                                                                      NAMES
 b7541b0ef121   final-app-java                                "sh -c 'java $JAVA_O…"   6 minutes ago   Up 6 minutes   0.0.0.0:8080->8080/tcp                                                                                                     app-java
 90d114c46cba   otel/opentelemetry-collector-contrib:0.86.0   "/otelcol-contrib --…"   6 minutes ago   Up 6 minutes   0.0.0.0:4317->4317/tcp, 0.0.0.0:8888->8888/tcp, 0.0.0.0:13133->13133/tcp, 0.0.0.0:55681->55681/tcp, 55678-55679/tcp        otel-collector
@@ -270,7 +270,7 @@ Puedes detener todo de la siguiente forma:
 
 Ejecuta:
 ```console
-D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker-compose down
+%> docker-compose down
 [+] Running 4/4
  ✔ Container app-java                Removed                                                                                                                                             10.5s
  ✔ Container otel-collector          Removed                                                                                                                                              0.4s
