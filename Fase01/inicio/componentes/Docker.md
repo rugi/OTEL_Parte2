@@ -84,7 +84,7 @@ En el caso de los contenedores, hay un estandar subyacente que lo permite, y es 
 No es necesario conocer el estandar, solo lo menciono para tener claro quien hace la magia, y, si derepente sale algun nuevo actor, tu pregunta como todo un profesional sea: ¿Respeta compleamente el OCI?  ;)
 
 
-Eso sí, debemos agradecer a Docker pues, ellos dieron parte de su código en el 2015 para que ahora tengamos el estandar y tantas alternativas.
+Eso sí, debemos agradecer a Docker(junto con CoreOS y otros) pues, ellos dieron parte de su código en el 2015 para que ahora tengamos el estandar y tantas alternativas.
 
 
 
