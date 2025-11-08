@@ -41,7 +41,7 @@ Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de dock
 
 Este laboratorio servirá de base para varias charlas en 2026. Si me ves en alguna, **salúdame, me encantará saber que llegaste aquí**.
 
-* `🟩` EVENTO: [https://2025.jconf.gt/es/](JConf Guatemala. 2026)
+* `🟩` EVENTO: [https://2025.jconf.gt/es] (JConf Guatemala. 2026)
     * Charlas:
         * OpenTelemetry para todos.
         * 3 JEPs que debemos conocer.
