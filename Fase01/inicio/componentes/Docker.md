@@ -503,12 +503,16 @@ Este es el `container registry` público de Docker.
 Y, esta es la imagen que vamos a ejecutar:
 [https://hub.docker.com/_/hello-world/](https://hub.docker.com/_/hello-world/)
 
+
 Puede ver que tiene un montón de tags, y por ahi verás el tag `latest`.
 
+
 Para poner en marcha un contenedor, solo debemos hacer lo siguiente:
+
 `docker run [OPTIONS] IMAGE [COMMAND] [ARG...]`
 
 Para nuestro ejercicio, será:
+
 `docker run hello-world`
 
 No estamos especificando el tag, asì que, estamos realmente usando la imagen hello-world con el tag: latest.
