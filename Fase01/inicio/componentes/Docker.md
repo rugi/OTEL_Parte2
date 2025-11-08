@@ -437,6 +437,11 @@ como sugerencia, crea un archivo de notas, con estos comandos, serán tu dìa a 
 
 Ejecutemos:
 ```console
+docker images
+```
+
+Ejemplo de salida:
+```console
 D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker images
 REPOSITORY                                    TAG       IMAGE ID       CREATED         SIZE
 neondatabase/neon_local                       v1        8e8892d2a674   6 weeks ago     475MB
@@ -450,9 +455,33 @@ otel/opentelemetry-collector-contrib          0.86.0    ad8763aae071   2 years a
 jaegertracing/all-in-one                      1.49      14a189507962   2 years ago     59.3MB
 ```
 
+Si acabas de instalar docker, verás una lista vacía.
+
+Ahora te debes estar preguntando, ¿Y para ver la lista de contenedores?
+##### Listar contenedores disponibles
+Para mostrar la lista de contenedores, ejecuta:
+```console
+docker container ls
+```
+
+Un ejemplo de salida:
+```console
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+¡¡Vamos bien!!
 
 #### Ejecuta un contenedor
-Listo, tenemos ya la imagen, ahora sí, ejecutemos un contenedor, tambien acá hay : "Hola Mundo"
+Pasemos al siguiente movimiento, pongamos en marcha un contenedor.
+Para no perder la costumbre, tambien tenemos un contenedor "Hola Mundo".
+
+Todas las imágenes que no sean creadas por nosotros (sí, también podemos crear imágenes y, es el verdadero potencial de los contenedores), deben vivir en un repositorio.
+A estos repositorios se les llama:registro de contenedores (`container registry` en inglés), agrega esto a tu vocabulario para este tema, es algo que debes tener presente siempre.
+Docker tiene un `container registry` público, desde ahi se descargan la mayoría de imágenes, pero, no es el único, conforme uses de manera profesional los contenedores, descubrirás que hay `container registry` privados; AWS, RedHat, Oracle, Azure, todos ellos tienen `container registry` pero, por ahora te sirve saber que usaremos el `container registry` público de Docker.
+Y digo `container registry` público ya que también los hay privados, ahi requerirás usuario y password.
+
+Ok, regresando a nuestro objetivo inmediato. Ejecutemos nuestro "Hola mundo" en contenedores.
+
 
 ### Todo ok
 
