@@ -428,7 +428,28 @@ Sencillo.
 #### Ejecuta un par de comandos
 Entonces, para tener un contenedor, primero debemos tener su imagen.
 
+Entonces, lo primero que debemos de hacer es saber cuáles imágenes tengo localmente.
+
+Para ello debemos ejecuar la siguiente linea,
+como sugerencia, crea un archivo de notas, con estos comandos, serán tu dìa a día con Docker:
+
+##### Listar imágenes disponbles
+
 Ejecutemos:
+```mermaid
+D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]> docker images
+REPOSITORY                                    TAG       IMAGE ID       CREATED         SIZE
+neondatabase/neon_local                       v1        8e8892d2a674   6 weeks ago     475MB
+postgres                                      latest    ca95f67ffb26   2 months ago    454MB
+docker.swagger.io/swaggerapi/swagger-editor   latest    aa4c8592eb3c   6 months ago    72.1MB
+ghcr.io/lftraining/lfs148-code-application    latest    e7005de3daa5   12 months ago   1.31GB
+grafana/grafana                               10.4.1    ccb72d0beb64   19 months ago   430MB
+grafana/loki                                  2.9.4     652b79950756   21 months ago   74.6MB
+grafana/promtail                              2.9.4     1c7475004f2f   21 months ago   198MB
+otel/opentelemetry-collector-contrib          0.86.0    ad8763aae071   2 years ago     221MB
+jaegertracing/all-in-one                      1.49      14a189507962   2 years ago     59.3MB
+```
+
 
 #### Ejecuta un contenedor
 Listo, tenemos ya la imagen, ahora sí, ejecutemos un contenedor, tambien acá hay : "Hola Mundo"
