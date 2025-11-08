@@ -90,7 +90,7 @@ graph TD
 Para continuar, veras 2 carpetas:
 
 * <a href="inicio/Readme.md">inicio.</a>
-* final.
+* <a href="final/Readme.md">final.</a>
 
 La carpeta inicio es nuestro punto de partida, a partir de ahí, junto con la guía, podrás llegar a lo que contiene la carpeta final.
 
