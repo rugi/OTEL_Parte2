@@ -79,7 +79,7 @@ classDiagram
 En el caso de Git, la compatibilidad se logra ya que todos los que la implementan en realidad son servidores de git con sus respectivos add-ons.
 
 
-En el caso de los contenedores, hay un estandar subyacente que lo permite, y es : OCI (Open Container Initiative). https://opencontainers.org/
+En el caso de los contenedores, hay un estandar subyacente que lo permite, y es : OCI (Open Container Initiative). https://opencontainers.org/ (OCI Spec está bajo licencia Apache 2.0)
 
 No es necesario conocer el estandar, solo lo menciono para tener claro quien hace la magia, y, si derepente sale algun nuevo actor, tu pregunta como todo un profesional sea: ¿Respeta compleamente el OCI?  ;)
 
@@ -206,7 +206,7 @@ graph TB
         VM_HostOS --> VM_Infrastructure
     end
 ```
-Por eso las máquinas virtuales suelen ser tan pesadas: 5 GB, 10 GB o incluso más.
+Por eso las máquinas virtuales suelen ser tan pesadas: 5 GB, 10 GB o incluso más, dependiendo del sistema operativo invitado y sus componentes instalados.
 Usar una VM tiene sentido cuando queremos ejecutar una aplicación de Windows en una máquina Linux, o a la inversa.
 
 ### Contenedores
@@ -226,6 +226,7 @@ Si lo que necesitamos “virtualizar” no es todo un sistema operativo, sino un
 
 Todo lo demás —hardware y sistema operativo— ya existen en el host, por lo tanto no necesitamos volver a empaquetarlos.
 Esa es la clave: los contenedores aprovechan el sistema operativo existente y solo aíslan lo estrictamente necesario para que la aplicación funcione igual, sin importar dónde se ejecute.
+
 
 Ahora sería algo así:
 
@@ -258,6 +259,7 @@ graph TB
 ### Comparación
 
 Entonces, para los contenedores, solo requerimos un "Container Runtime" todo lo demás lo da nuestra maquina host, nos ahorramos: el hypervisor y el SO Guest.
+El runtime no emula hardware; usa el mismo kernel del host y mecanismos del sistema operativo (namespaces, cgroups) para aislar cada contenedor.
 Nos ahorramos las partes más costosas, por eso es que son tan ligeros.
 
 ¿Queda más claro ahora cierto?
@@ -394,6 +396,8 @@ Server: Docker Engine - Community
 Antes de pasar al siguiente paso, es importante que tengamos clara la diferencia entre IMAGEN y CONTENEDOR.
 
 Una Imagen(`image`) es la plantilla para generar un contenedor(`container`), podemos verlo así: Un contenedor es una imagen en ejecución, y, puedo generar muchos contenedores de la misma plantilla. Haciendo una analogía con la POO: _"La imagen es la clase, los contenedores son las instancias de esa clase"_
+
+Cada imagen está formada por capas (`layers`) que pueden reutilizarse entre contenedores, lo que ahorra espacio y acelera descargas, esto con el uso se entiende mejor.
 
 En resumen:
 
@@ -562,7 +566,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 Seguirás viendo vacía la lista, ya que nuestro contenedor ya se terminó de ejecutar.
 
 ### Ejemplo práctico
-Pasemos ahora a ver algo más práctico, probemos la imagen de ngnix
+Pasemos ahora a ver algo más práctico, probemos la imagen de nginx
 
 #### Ngnix.
 La imagen de ngnix en el CR de Docker es esta:
@@ -639,7 +643,7 @@ D:\code\github\otel2\OTEL_Parte2\Fase01\final [main ≡]>
 Verás que hay un contenedor vivo.
 
 Abre tu navegador en el puerto 8080, deberás ver algo como esto:
-![Nuestro contenedor de ngnix](ngnix.png "Nuestro contenedor de ngnix")
+![Nuestro contenedor de nginx](ngnix.png "Nuestro contenedor de nginx")
 
 Felicitaciones, has ejecutado tu primer contenedor.
 
@@ -647,7 +651,7 @@ Felicitaciones, has ejecutado tu primer contenedor.
 Algunos otros comandos que debes conocer son:
 `docker stop _container_id_`
 
-Deten el contenedor de ngnix, primero listamos los contenedores disponibles, vemos su containerid, y con ese valor, podemos detenerlo.
+Deten el contenedor de nginx, primero listamos los contenedores disponibles, vemos su containerid, y con ese valor, podemos detenerlo.
 
 ```console 
 %> docker container ls
