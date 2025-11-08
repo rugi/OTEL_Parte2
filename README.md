@@ -57,6 +57,6 @@ Este repositorio se publica bajo la **MIT License**. Eres libre de usarlo, copia
 
 ---
 
-**Gracias por visitar este proyecto**. Espero te sea útil, ya sea para aprender, enseñar o inspirarte.
+**Gracias por visitar este proyecto**. Espero te sea útil.
 
 > _RuGI_
