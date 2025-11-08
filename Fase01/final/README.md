@@ -75,6 +75,8 @@ graph TD
 ---
 
 ## 🚀 Puesta en marcha.
+Vamos a abrir dos ventanas de linea de comandos, en la primera levantaremos nuestros contenedores usando docker compose, y en la otra ejecutaremos comandos adicionales, en ambos casos, colocate en este misma carpeta.
+`PATH_LOCAL/Fase01/final/`
 
 
 ---
