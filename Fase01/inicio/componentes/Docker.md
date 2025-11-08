@@ -431,9 +431,7 @@ Docker tiene un repositorio de imágenes, no de contenedores, nosotros descargam
 Sencillo.
 
 #### Ejecuta un par de comandos
-Entonces, para tener un contenedor, primero debemos tener su imagen.
-
-Entonces, lo primero que debemos de hacer es saber cuáles imágenes tengo localmente.
+Entonces, para tener un contenedor, primero debemos tener su imagen, por lo tanto, lo primero que debemos de hacer es saber cuáles imágenes tengo localmente.
 
 Para ello debemos ejecuar la siguiente linea,
 como sugerencia, crea un archivo de notas, con estos comandos, serán tu dìa a día con Docker:
@@ -631,7 +629,7 @@ Status: Downloaded newer image for nginx:1.29.3
 3c42feb7c36f897cf8cbc9b9e22fab6a4b22c16df774d51a10dd475da781a2b2
 ```
 
- Observa como, al no tener la imagen localmente, primero se descarga.
+ Observa como, al no tener la imagen localmente, primero se descarga (también puedes unicamente descargar la imagen sin intentar ejecutarla con `docker pull nginx:1.29.3`).
 
  Ahora sí, si ejecutas:
 ```console 
