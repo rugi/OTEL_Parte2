@@ -288,6 +288,8 @@ Si quieres conocer que más instrucciones puedes ejecutar, revisa otras operacio
 
 ## 📘 Próxima fase (Fase 2)
 
-> Integración de logs distribuidos y correlación de trazas con herramientas como Loki o Fluent Bit.
+Integración de logs distribuidos y correlación de trazas con herramientas como Loki o Fluent Bit.
+¿Listo para avanzar?
 
+Vayamos a la <a href="../../Fase02">Fase 02</a>
 ---
