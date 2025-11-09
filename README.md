@@ -1,16 +1,18 @@
 # Laboratorio Técnico de Observabilidad con OpenTelemetry
 
-¡Bienvenido a este laboratorio técnico progresivo sobre observabilidad! 
+¡Bienvenido a este laboratorio técnico progresivo, didàctico, posicionador sobre observabilidad! 
 
 Aquí encontrarás una guía paso a paso que explora cómo integrar **trazas, logs y métricas** en un entorno local usando tecnologías modernas como **OpenTelemetry, Loki, Promtail, Fluent Bit, Grafana, Tempo y MinIO**, todo orquestado desde `docker-compose`.
+(Esto para que le sea util a la mayor cantidad de personas).
 
 ## 🧭 Propósito del Proyecto
 
 Este laboratorio tiene varios objetivos clave:
 
 - Aprender haciendo: mientras construyo, aprendo; y comparto lo aprendido para que otras personas también puedan beneficiarse.
-- Ofrecer una base realista para quienes desean entender cómo construir un stack completo de observabilidad sin depender de soluciones propietarias.
-- Respaldar con material técnico mis próximas charlas en 2026.
+- Ofrecer una base funcional para quienes desean entender cómo construir un stack completo de observabilidad usando preferencialmente proyectos opensource.
+- Respaldar con material técnico comprobable mis próximas charlas en 2026 (y el último jalón del 2025).
+- Reforzar mi perfil técnico como Solutions Architect/Software engineer y en proceso Observability Focus (OpenTelemetry, CNCF).
 
 ## ✍️ Filosofía del Contenido
 
