@@ -28,6 +28,7 @@ También hay videos cortos, dirigidos principalmente a personas que apenas inici
 Al final de todas las fases, pondré un listado final de todo este material complementario.
 
 ## 🧱 Fases del Laboratorio
+Las fases aun no completadas podrán cambiar de stack sin aviso, el objetivo es cumplir todas las fases con un stack opensource.
  
 | Fase     | Objetivo                                                                 | Stack principal                                                | Estatus       | Liberado en:|
 |----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|---------------|
@@ -39,6 +40,8 @@ Al final de todas las fases, pondré un listado final de todo este material comp
 | Fase 05  | Bonus: Dashboards como código utilizando PERSES                         | PERSES, Grafana, OTel, Loki, Prometheus                        | 🚧 Pendiente  | Pendiente |
 | Fase 06  | Persistencia distribuida de logs                                         | Loki + MinIO (S3-like backend), Docker volumes                 | 🚧 Pendiente  | Pendiente |
 | Fase 07  | Persistencia distribuida de trazas                                       | Tempo + MinIO, Jaeger, OTel Collector                          | 🚧 Pendiente  | Pendiente |
+| Fase 08 | Persistencia distribuida de métricas                                      | Prometheus + Thanos + MinIO                                    | 🚧 Pendiente | Pendiente |
+
  
 
 ## 🎤 Próximas Charlas
