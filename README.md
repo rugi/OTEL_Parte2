@@ -22,10 +22,12 @@ Este laboratorio tiene varios objetivos clave:
 
 ## 📚 Material Complementario
 
-Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado.
+Mi idea es tener contenido 101 para este laboratorio,  mi idea tambien es que estos 101 se integren conforme se vayan requiriendo; ahora mismo hay uno de docker.
 También hay videos cortos, dirigidos principalmente a personas que apenas inician con el uso de este tipo de ambientes. 
+Su objetivo es reforzar algunas acciones de validación.
+Habrá mucho de eso, puntos de validación, es algo que me agrada de los tutoriales que tomo, así que, replicaré esa estraregia.
 
-Al final de todas las fases, pondré un listado final de todo este material complementario.
+Al final de todas las fases, pondré un listado final todo este material complementario.
 
 ## 🧱 Fases del Laboratorio
 Las fases aun no completadas podrán cambiar de stack sin aviso, el objetivo es cumplir todas las fases con un stack opensource.
