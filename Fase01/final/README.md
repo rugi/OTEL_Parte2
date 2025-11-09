@@ -249,6 +249,8 @@ Vemos 3 contenedores ejecutandose, entonces, validado todo OK.
 - Regresa a Jaeger, debes ver ahora las trazas reflejadas en [http://localhost:16686](http://localhost:16686)
 - Seleccionar el servicio `app-java` en Jaeger y explorar los spans generados.
 
+* Puedes ver el demo aquí:[demoFase01.mp4] (Demo Fase 01. Completo).
+
 Listo, estás capturando traces con intrumentación automática de OpenTelemetry.
 ---
 
