@@ -12,7 +12,6 @@ Este laboratorio tiene varios objetivos clave:
 - Aprender haciendo: mientras construyo, aprendo; y comparto lo aprendido para que otras personas también puedan beneficiarse.
 - Ofrecer una base funcional para quienes desean entender cómo construir un stack completo de observabilidad usando preferencialmente proyectos opensource.
 - Respaldar con material técnico comprobable mis próximas charlas en 2026 (y el último jalón del 2025).
-- Reforzar mi perfil técnico como Solutions Architect/Software engineer.
 
 ## ✍️ Filosofía del Contenido
 
