@@ -284,7 +284,7 @@ Listo. Todo detenido.
 Si quieres conocer que más instrucciones puedes ejecutar, revisa otras operaciones que te pueden ayudar en este camino de aprendizaje:
 [Otras operaciones útiles](../../ext/lab-operaciones-extendido.md)
 
-** Puedes ver el demo aquí: <a href="./demoFase01.mp4">Demo Fase 01. Completo</a>. **
+**Puedes ver el demo aquí: <a href="./demoFase01.mp4">Demo Fase 01. Completo</a>.**
 
 ## 📘 Próxima fase (Fase 2)
 
