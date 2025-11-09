@@ -23,7 +23,10 @@ Este laboratorio tiene varios objetivos clave:
 
 ## 📚 Material Complementario
 
-Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado, al final de todas las fases, pondré un listado final de todos los 101 dentro de todo este material. Otros temas básicos tendrán su espacio más adelante.
+Habrá contenido 101 que acompañe este laboratorio, ahora mismo hay uno de docker, se integran justo en el momento que considero adecuado.
+También hay videos cortos, dirigidos principalmente a personas que apenas inician con el uso de este tipo de ambientes. 
+
+Al final de todas las fases, pondré un listado final de todo este material complementario.
 
 ## 🧱 Fases del Laboratorio
  
