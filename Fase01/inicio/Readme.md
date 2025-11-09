@@ -66,3 +66,6 @@ Revisemos Jaeger.
 * Revisión de trazas.
 -------
 
+
+Si todo está bien, compara tu resultado con lo presentado en la carpeta <a href="../final/Readme.md">final</a>.
+
