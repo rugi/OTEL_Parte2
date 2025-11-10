@@ -213,7 +213,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot lo
 ```
 
 ## Revisemos lo realizado.
-Si la compilación termina satisfactoriamente, deberás ver que se creó una carpeta llamada target y dentro verás  un par de archivos .jar:
+Si la compilación termina satisfactoriamente, deberás ver que se creó una carpeta llamada `target` y dentro verás  un par de archivos `.jar`:
 
 ```shell
 workarea/app-java/
