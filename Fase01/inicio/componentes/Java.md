@@ -62,6 +62,7 @@ El primer componente que vamos a agregar es: `app-java`, así que, esta es nuest
 Después de crear la estructura de carpetas y copiar los archivos en las carpetas indicadas debes tener esto:
  
 ```shell 
+│workarea
 ├───app-java
 │   │   pom.xml
 │   └───src
