@@ -125,9 +125,10 @@ Valida que tengas al menos estas versiones para que puedas compilar y ejecutar s
 
 ### Validar que compile sin problemas
 
-### Validar que ejecute sin problemas
-
 ## Revisemos lo realizado.
+Si la compilación termina satisfactoriamente, deberás ver un .jar en la carpeta:
+
+Ahora, antes de ejecutar, revisemos que tenemos.
 
 ## Maven
 
@@ -225,6 +226,12 @@ flowchart TB
 
 ## Probemos que todo esté OK.
 
+Ahora sí, ejecutemos el .jar
+
+### Validar que ejecute sin problemas
+
+
+Si logras ver el mensaje en el browser y en la consola, tenemos todo listo.
 
 ----
 Podemos continuar.
