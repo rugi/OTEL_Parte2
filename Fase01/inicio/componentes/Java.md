@@ -124,7 +124,7 @@ Valida que tengas al menos estas versiones para que puedas compilar y ejecutar s
 
 ### Validar que compile sin problemas
 
-### Validar que ejecute sin problemas.
+### Validar que ejecute sin problemas
 
 ## Revisemos lo realizado.
 
@@ -170,6 +170,44 @@ flowchart TD
 
 
 ## Spring boot
+
+
+```mermaid
+flowchart TB
+    %% Nodo principal
+    A["☘️ Spring Ecosystem"]:::ecosystem
+
+    %% Bloques principales
+    A --> B["🧩 Spring Framework (Core, Context, Beans, AOP, MVC)"]:::framework
+    B --> C["🚀 Spring Boot (auto-configuración + opinionated defaults)"]:::boot
+
+    %% Subproyectos del ecosistema Spring
+    A --> D["📦 Spring Data (JPA, MongoDB, Redis, Cassandra)"]:::sub
+    A --> E["🌐 Spring Cloud (Config, Gateway, Eureka, Sleuth, etc.)"]:::sub
+    A --> F["🔒 Spring Security (Autenticación y autorización)"]:::sub
+    A --> G["🧠 Spring AI (Integración con modelos de IA)"]:::sub
+    A --> H["🧰 Spring Batch (Procesamiento por lotes)"]:::sub
+    A --> I["📡 Spring Integration (Mensajería y flujos de datos)"]:::sub
+
+    %% Conexiones conceptuales
+    C --> B
+    C --> D
+    C --> E
+    C --> F
+    C --> H
+    C --> I
+
+    %% Notas explicativas
+    B --- J["✅ Spring Framework es el núcleo de todo el ecosistema"]
+    C --- K["💡 Spring Boot simplifica la configuración y el arranque de apps Spring"]
+    A --- L["🔄 Cada subproyecto se integra opcionalmente con el Framework base"]
+
+    %% Estilos
+    classDef ecosystem fill:#e0f7fa,stroke:#0097a7,stroke-width:2px,color:#004d40,font-weight:bold;
+    classDef framework fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,font-weight:bold;
+    classDef boot fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,font-weight:bold;
+    classDef sub fill:#e8f5e9,stroke:#388e3c,stroke-width:1px;
+```
 
 
 ## Spring boot. Los controladores
