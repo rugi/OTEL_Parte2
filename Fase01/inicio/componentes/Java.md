@@ -23,11 +23,31 @@ Nuestro controlador implementará un endpoint con el método GET:
 De momento no recibe nada, nos interesa de momento tener el esqueleto, conforme avancemos iremos implementando más cosas y corrigiendo algunas cosas, meter un logger, adopdar algunas convenciones en los nombres,etc.
 El objetivo es, echarlo andar lo más sencillo posible. Cuando ya todo compile y ejecute correctamente, repasaremos con algo de detalle lo realizado.
 
-
-
 Así que, manos a la obra.
 
 ### Crear la estructura de carpetas.
+Primero vamos a crear una estructura de carpetas:
+```shell
+│workarea
+├───app-java
+│   ├───.mvn
+│   │   └───wrapper
+│   └───src
+│       ├───main
+│       │   ├───java
+│       │   │   └───com
+│       │   │       └───example
+│       │   │           └───app_java
+│       │   │               └───controller
+│       │   └───resources
+│       │       ├───static
+│       │       └───templates
+│       └───test
+│           └───java
+│               └───com
+│                   └───example
+│                       └───app_java
+```
 
 ### Agrega el archivo properties
 
