@@ -134,8 +134,8 @@ Valida que tengas al menos estas versiones para que puedas compilar y ejecutar s
 
 ```mermaid
 flowchart TD
-    A["📦 <project> (POM raíz)"] --> B["🧱 <modelVersion>"]
-    A --> C["👪 <parent>"]
+    A["📦 <project> POM raíz"] --> B["🧱 modelVersion"]
+    A --> C["👪 parent"]
     C --> C1["groupId: org.springframework.boot"]
     C --> C2["artifactId: spring-boot-starter-parent"]
     C --> C3["version: 3.5.5"]
@@ -147,17 +147,17 @@ flowchart TD
     D --> D4["name: app-java"]
     D --> D5["description: Demo project for Spring Boot"]
 
-    A --> E["⚙️ <properties>"]
+    A --> E["⚙️ properties"]
     E --> E1["java.version = 21"]
 
     %% Sección destacada de dependencias
-    A --> F["🧩 <dependencies>"]
+    A --> F["🧩 dependencies"]
     F:::highlight --> F1["spring-boot-starter-actuator"]
     F:::highlight --> F2["spring-boot-starter-web"]
-    F:::highlight --> F3["spring-boot-starter-test (scope=test)"]
+    F:::highlight --> F3["spring-boot-starter-test, scope=test"]
 
-    A --> G["🔨 <build>"]
-    G --> G1["<plugins>"]
+    A --> G["🔨 build"]
+    G --> G1["plugins"]
     G1 --> G2["spring-boot-maven-plugin"]
 
     %% Estilos
