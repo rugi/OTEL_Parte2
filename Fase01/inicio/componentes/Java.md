@@ -223,7 +223,7 @@ workarea/app-java/
 ```
 El archivo: `app-java-0.0.1-SNAPSHOT.jar` es nuestro artefacto ejecutable.
 
-Si no compila, revisa la ubicación de cada archivo, y si es necesario, compara tu estructura con la carpeta final, recuerda que ahi está la solución final de esta fase 01.
+Si no compila, revisa la ubicación de cada archivo, y si es necesario, compara tu estructura con la carpeta `final`, recuerda que ahi está la solución final de esta fase 01.
 
 Ahora, antes de ejecutar, revisemos que tenemos.
 
