@@ -338,7 +338,7 @@ Todo lo que Spring Boot ofrece puede hacerse también con Spring Framework “a 
 ```mermaid
 flowchart TD
 
-    A[Spring Framework<br><small>(IoC, DI, AOP, MVC, Data, Security, etc.)</small>] 
+    A[Spring Framework<br><small> IoC, DI, AOP, MVC, Data, Security, etc.</small>] 
         --> B[Spring Boot<br><small>Auto-configuración, starters, defaults</small>]
 
     A --> C[Spring Web MVC]
