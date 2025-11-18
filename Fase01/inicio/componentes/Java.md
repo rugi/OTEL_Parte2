@@ -331,10 +331,6 @@ flowchart TD
 
 Spring Boot es, esencialmente, un subconjunto dentro del ecosistema mayor de Spring Framework. No es un framework separado, sino una capa encima del framework principal que lo aprovecha por completo. Spring Framework contiene todos los módulos fundamentales: IoC, Dependency Injection, AOP, MVC, Data, Security y muchos más; Boot simplemente los hace más accesibles.
 
-La principal ventaja de Spring Boot es que incorpora configuraciones por defecto y auto-configuración inteligente. Esto reduce drásticamente la cantidad de código ceremonial (boilerplate) que tradicionalmente se requería al trabajar con Spring “puro”. Además, sus starters solucionan el problema común del “dependency hell”, entregando combinaciones de dependencias ya probadas y compatibles entre sí.
-
-Todo lo que Spring Boot ofrece puede hacerse también con Spring Framework “a pelo”, sin Boot. Sin embargo, lograr lo mismo requiere más pasos: configurar beans a mano, declarar servidores embebidos, definir integration points y administrar dependencias de forma más granular. Boot no agrega capacidades nuevas; lo que hace es reducir el esfuerzo y acelerar el desarrollo haciendo que Spring sea más fácil de usar desde el primer minuto.
-
 ```mermaid
 flowchart TD
 
@@ -350,6 +346,12 @@ flowchart TD
     B --> H[Aplicaciones listas para usar<br><small>Tomcat embebido, Actuator, Configuración mínima</small>]
 
 ```
+
+La principal ventaja de Spring Boot es que incorpora configuraciones por defecto y auto-configuración inteligente. Esto reduce drásticamente la cantidad de código ceremonial (boilerplate) que tradicionalmente se requería al trabajar con Spring “puro”. Además, sus starters solucionan el problema común del “dependency hell”, entregando combinaciones de dependencias ya probadas y compatibles entre sí.
+
+Todo lo que Spring Boot ofrece puede hacerse también con Spring Framework “a pelo”, sin Boot. Sin embargo, lograr lo mismo requiere más pasos: configurar beans a mano, declarar servidores embebidos, definir integration points y administrar dependencias de forma más granular. Boot no agrega capacidades nuevas; lo que hace es reducir el esfuerzo y acelerar el desarrollo haciendo que Spring sea más fácil de usar desde el primer minuto.
+
+
 
 ```mermaid
 flowchart TB
