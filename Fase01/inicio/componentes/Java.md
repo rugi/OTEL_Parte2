@@ -327,11 +327,29 @@ flowchart TD
     class A,B,C,D,E,F,G,C1,C2,C3,D1,D2,D3,D4,D5,E1,G1,G2,F1,F2,F3 default;
 ```
 
-## Spring 
+## Spring y Spring boot
 
+Spring Boot es, esencialmente, un subconjunto dentro del ecosistema mayor de Spring Framework. No es un framework separado, sino una capa encima del framework principal que lo aprovecha por completo. Spring Framework contiene todos los módulos fundamentales: IoC, Dependency Injection, AOP, MVC, Data, Security y muchos más; Boot simplemente los hace más accesibles.
 
-## Spring boot
+La principal ventaja de Spring Boot es que incorpora configuraciones por defecto y auto-configuración inteligente. Esto reduce drásticamente la cantidad de código ceremonial (boilerplate) que tradicionalmente se requería al trabajar con Spring “puro”. Además, sus starters solucionan el problema común del “dependency hell”, entregando combinaciones de dependencias ya probadas y compatibles entre sí.
 
+Todo lo que Spring Boot ofrece puede hacerse también con Spring Framework “a pelo”, sin Boot. Sin embargo, lograr lo mismo requiere más pasos: configurar beans a mano, declarar servidores embebidos, definir integration points y administrar dependencias de forma más granular. Boot no agrega capacidades nuevas; lo que hace es reducir el esfuerzo y acelerar el desarrollo haciendo que Spring sea más fácil de usar desde el primer minuto.
+
+```mermaid
+flowchart TD
+
+    A[Spring Framework<br><small>(IoC, DI, AOP, MVC, Data, Security, etc.)</small>] 
+        --> B[Spring Boot<br><small>Auto-configuración, starters, defaults</small>]
+
+    A --> C[Spring Web MVC]
+    A --> D[Spring Security]
+    A --> E[Spring Data]
+    A --> F[Spring Integration]
+    A --> G[Spring WebFlux]
+
+    B --> H[Aplicaciones listas para usar<br><small>Tomcat embebido, Actuator, Configuración mínima</small>]
+
+```
 
 ```mermaid
 flowchart TB
