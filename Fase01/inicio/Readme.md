@@ -34,8 +34,8 @@ Tenemos entonces:
 #### Aplicacion Java.
 * <a href="componentes/Java.md">Aplicación java</a>. La aplicación java que usaremos de ejemplo.
 #### Docker. Siguientes pasos.  
-* Contenerizacion. Crear un contenedor para nuestra aplicación java.
-* Docker compose. Ahora, aprenderemos a usar docker compose.
+*  <a href="componentes/Contenerizar.md">Contenerizacion</a>. Crear un contenedor para nuestra aplicación java.
+*  <a href="componentes/Dockercompose.md">Docker compose</a>. Ahora, aprenderemos a usar docker compose.
 #### Otel-Collector.
 * <a href="componentes/OtelCollector.md">OTEL Collector</a>. La configuración del servidor Collector.
 #### Jaeger.
