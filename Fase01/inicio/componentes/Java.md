@@ -1,11 +1,12 @@
 # Aplicación java
 
 # Preparando el código
-En este apartado, crearemos una aplicación java sencilla, posteriormente la empaquetaremos en una imagen para poder usarla con docker, pero, por ahora nos concentraremos solo en esta parte:
-```
-!
-```
-Crear la aplicación java y validar que funciona perfectamente.
+En este apartado, crearemos una aplicación java sencilla, posteriormente la empaquetaremos en una imagen para poder usarla con docker, pero, por ahora nos concentraremos solo en esta parte.
+Acá mismo hay una carpeta llamada `java`, ahí se encuentran los 5 archivos que necesitamos para cubrir esta parte.
+
+En este punto vamos a crear la aplicación java y validar que funciona perfectamente.
+Ese será nuestro `checkpoint`.
+
 En mi experiencia, ver que algo ya funciona, te mantiene motivado a seguir, así que, ya funcionando iremos haciendo ajustes.
 
 Crearemos una aplicación java, utilizando Springboot:
