@@ -229,8 +229,38 @@ Si no compila, revisa la ubicación de cada archivo, y si es necesario, compara 
 Ahora, antes de ejecutar, revisemos que tenemos.
 
 ## Maven
+Maven sigue siendo una de las herramientas más utilizadas en el ecosistema Java porque proporciona un modelo estandarizado para construir, probar, empaquetar y distribuir aplicaciones. Su valor principal radica en ofrecer una estructura de proyecto consistente, predecible y compatible con prácticamente todos los frameworks modernos (Spring, Quarkus, Micronaut, Jakarta EE), permitiendo que equipos grandes y pequeños trabajen con procesos repetibles. Además, abstrae complejidades del ciclo de vida del build mediante fases bien definidas, evitando que los desarrolladores reinventen scripts o procesos manuales.
 
+Uno de los pilares actuales de Maven es la gestión declarativa de dependencias, basada en repositorios centrales como Maven Central, Apache Repository, y espejos públicos, además de repositorios privados como Nexus, Artifactory o GitHub Packages, comunes en entornos empresariales. Esta gestión ordenada permite controlar versiones, reproducir builds y aislar artefactos internos para cumplir requisitos de seguridad, compliance y control organizacional.
+
+Maven también ayuda a mitigar el clásico problema del “jar hell”, en el que múltiples versiones de la misma biblioteca generaban conflictos difíciles de rastrear. Gracias a su modelo de dependencias transitivas, la gestión de versiones y mecanismos como dependencyManagement, Maven reduce estos choques y hace que la resolución de artefactos sea más transparente. Hoy en día, en proyectos complejos, esta capacidad sigue siendo clave para mantener builds estables y prevenir fallos inesperados en tiempo de ejecución.
+
+Finalmente, la arquitectura extensible de Maven, basada en plugins, permite automatizar prácticamente cualquier parte del pipeline: compilación, pruebas con JUnit, empaquetado en JAR/WAR, análisis estático, generación de reportes, integración continua, publicación de artefactos y despliegues. Su profunda integración con herramientas de CI/CD lo mantiene relevante incluso ante alternativas como Gradle, ofreciendo fiabilidad y estandarización para equipos que priorizan estabilidad sobre flexibilidad sintáctica.
+
+```mermaid
+flowchart TD
+    A[validate] --> B[compile]
+    B --> C[test]
+    C --> D[package]
+    D --> E[verify]
+    E --> F[install]
+    F --> G[deploy]
+
+    subgraph Default Lifecycle
+    A
+    B
+    C
+    D
+    E
+    F
+    G
+    end
+```
 ### El archivo pom.xml
+
+El pom.xml define la configuración completa del proyecto Maven: sus dependencias, plugins, módulos y cómo deben ejecutarse las fases del ciclo de vida del build. Su característica principal es que es declarativo, permitiendo reproducibilidad, gestión automática de dependencias (incluyendo transitivas) y estandarización en la construcción del proyecto.
+
+Este es nuestro archivo `pom.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -293,7 +323,7 @@ Ahora, antes de ejecutar, revisemos que tenemos.
 
 </project>
 ```
-
+En este diagrama, podemos observar de una mejor manera lo anterior.
 ```mermaid
 flowchart TD
     A["📦 <project> POM raíz"] --> B["🧱 modelVersion"]
@@ -394,6 +424,8 @@ flowchart TB
 
 ## Spring boot. Los controladores
 
+En Spring Boot reconocemos un Controller porque está anotado con @Controller o @RestController, expone métodos manejadores (@GetMapping, @PostMapping, etc.) y forma parte del flujo MVC para atender peticiones HTTP. Se caracteriza por separar la lógica de presentación de la lógica de negocio y se beneficia del enfoque Convention over Configuration, donde Spring infiere rutas, serialización y comportamientos estándar sin necesidad de configuraciones manuales extensas.
+
 ```java
 package com.example.app_java.controller;
 
@@ -418,6 +450,10 @@ public class HelloController {
 ```
 
 ## Spring boot. La clase de arranque
+
+@SpringBootApplication sirve para arrancar una aplicación Spring Boot activando automáticamente la configuración por defecto, el escaneo de componentes y el motor de autoconfiguración. Sigue el patrón Convention over Configuration, ya que Spring detecta qué debe habilitar (beans, configuración, componentes web, etc.) según lo que encuentra en el classpath; y normalmente se coloca en la clase principal del proyecto, combinando internamente las anotaciones @Configuration, @EnableAutoConfiguration y @ComponentScan.
+
+
 ```java
 package com.example.app_java;
 
@@ -435,11 +471,23 @@ public class AppJavaApplication {
 ```
 
 ## El archivo de propiedades.
+En Spring Boot, los archivos application.properties (o application.yml) son esenciales porque permiten externalizar la configuración, evitando valores fijos en el código y facilitando ajustar puertos, credenciales, perfiles, endpoints, timeouts o cualquier parámetro sin recompilar. Esta separación entre código y configuración hace que las aplicaciones sean más mantenibles, seguras y fáciles de desplegar en diferentes entornos —dev, QA, stage, prod— con solo cambiar un archivo.
+
+Además, su versatilidad radica en que Spring Boot los integra profundamente con su sistema de autoconfiguración: cualquier propiedad puede habilitar, ajustar o desactivar partes del framework, y los desarrolladores incluso pueden definir propiedades personalizadas y enlazarlas a clases tipo @ConfigurationProperties. Gracias a esto, los properties se convierten en una herramienta poderosa para controlar comportamiento, activar módulos, gestionar perfiles (spring.profiles.active) y parametrizar microservicios complejos de forma limpia y escalable.
+
+
 ```properties
 spring.application.name=app-java
 ```
 
 ## La clase de Testing
+
+
+El uso de org.junit.jupiter.api.Test indica que estamos utilizando JUnit 5 (Jupiter), la versión moderna del framework de pruebas que introduce una arquitectura más flexible, anotaciones mejoradas, un motor extensible y un modelo más claro para organizar y ejecutar tests. Por su parte, @SpringBootTest es ventajoso porque levanta el contexto completo de Spring Boot para pruebas de integración, permitiendo verificar beans, configuración, inyección de dependencias y comportamiento real de la aplicación sin necesidad de mockear manualmente todo el entorno.
+
+Dentro del ecosistema de Spring Boot, otros dos marcos de trabajo ampliamente utilizados para pruebas son Mockito, ideal para crear mocks y aislar la lógica de negocio, y Spring MockMvc, que permite probar controladores web de forma ligera simulando peticiones HTTP sin levantar el servidor completo.
+
+
 ```java
 package com.example.app_java;
 
