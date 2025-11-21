@@ -17,7 +17,7 @@ Esta es la forma menos intrusiva para utilizar opentelemetry, el código java "n
 A esto en OpenTelemetry lo conocemos como "instrumentación automática", el jar se mantiene tal cual, y solo se "adjunta" un agente (otro jar, el de opentelemetry) al momento de arrancar.
 
 Utilizaremos Docker para facilitar las cosas, sino sabes Docker, no te preocupes, la redacción será amigable y tratará de irte aclarando dudas,
-si ya sabes Docker, solo verás redundante esa perte, pero te la puedes saltar.
+si ya sabes Docker, solo verás redundante esa parte, pero te la puedes saltar.
 
 Asumiremos que partimos desde cero, que solo tenemos una app en java funcionando.
 ``` mermaid
