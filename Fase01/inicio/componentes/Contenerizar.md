@@ -119,6 +119,35 @@ mindmap
       VOLUME
 ```
 
+El flujo será
+
+```mermaid
+flowchart TB
+
+    subgraph BuildTime["Fase de Construcción (docker build)"]
+        direction TB
+        F1(FROM)
+        F2(ARG)
+        F3(RUN)
+        F4(COPY / ADD)
+        F5(LABEL / EXPOSE)
+        F6(WORKDIR / USER / VOLUME)
+        F7(ONBUILD / SHELL)
+    end
+
+    BuildTime --> IMG((Imagen construida<br/>capas persistentes))
+
+    subgraph RunTime["Fase de Ejecución (docker run)"]
+        direction TB
+        R1(CMD)
+        R2(ENTRYPOINT)
+        R3(HEALTHCHECK)
+        R4(STOPSIGNAL)
+    end
+
+    IMG --> RunTime
+```
+
 ## Nuestra 1a imagen
 
 ## Optimizemos
