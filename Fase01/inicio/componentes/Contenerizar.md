@@ -151,5 +151,33 @@ flowchart TB
 ## Nuestra 1a imagen
 
 ## Optimizemos
+### Fases en un Dockerfile: Build (Builder) y Runtime
+
+La separación entre la fase builder (construcción) y la fase runtime (ejecución) nace de una necesidad práctica: las aplicaciones modernas requieren herramientas pesadas para compilarse —JDK, Node.js completo, Maven, Gradle, Go toolchain— pero no necesitan nada de eso para ejecutarse. Antes de 2016, los Dockerfiles generaban imágenes enormes porque todo se construía y se ejecutaba en la misma imagen. A partir de Docker 17.05 se introdujeron los multi-stage builds, permitiendo crear una primera imagen "builder" que compila el código, y luego copiar únicamente los artefactos resultantes (por ejemplo, el JAR de Spring Boot) a una imagen final mínima —la imagen de runtime— mucho más ligera y segura. Esta separación ayuda a que el Dockerfile refleje de manera clara las dos realidades del software: construir y ejecutar no son la misma cosa.
+
+Usar un builder separado del runtime aporta ventajas significativas: imágenes finales mucho más pequeñas, reducción drástica de superficie de ataque (por ejemplo, imágenes Alpine o distroless), tiempos de despliegue más rápidos, capas más eficientes en caché, y una mayor coherencia entre entornos. Además, promueve buenas prácticas de seguridad: nunca expones herramientas de build en producción. La documentación oficial lo respalda aquí:
+
+🔗 Multi-stage builds — Docker Docs: https://docs.docker.com/build/building/multi-stage/
+
+``` mermaid
+flowchart LR
+    subgraph Builder["Fase 1: Builder (docker build)"]
+        B1(FROM maven:3.9-jdk-17)
+        B2(COPY source/)
+        B3(RUN mvn clean package)
+        B4(OUTPUT: app.jar)
+    end
+
+    B4 --> C((Copia artefacto))
+
+    subgraph Runtime["Fase 2: Runtime (docker run)"]
+        R1(FROM eclipse-temurin:17-jre)
+        R2(COPY app.jar)
+        R3(CMD ["java","-jar","app.jar"])
+    end
+
+    C --> Runtime
+```
+
 
 ## Version final.
