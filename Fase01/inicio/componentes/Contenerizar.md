@@ -81,13 +81,43 @@ Podemos imaginar al docker file como la gran cocina donde prepararemos nuestra i
 | `WORKDIR`      | Establece directorio de trabajo. | `WORKDIR /app` | **Build-time (una vez)** |
 | `ONBUILD`      | Instrucciones que se ejecutan cuando esta imagen es base de otra. | `ONBUILD COPY . /src` | **Build-time (pero en imágenes “hijas”)** |
 | `STOPSIGNAL`   | Señal enviada al detener contenedores. | `STOPSIGNAL SIGTERM` | **Run-time (al detener contenedor)** |
-| `HEALTHCHECK`  | Define chequeos de salud del contenedor. | `HEALTHCHECK CMD curl -f http://localhost:8080/health || exit 1` | **Run-time (cíclico mientras el contenedor corre)** |
+| `HEALTHCHECK`  | Define chequeos de salud del contenedor. | `HEALTHCHECK CMD curl -f http://localhost:8080/health  exit 1` | **Run-time (cíclico mientras el contenedor corre)** |
 | `SHELL`        | Cambia la shell por defecto. | `SHELL ["/bin/bash", "-c"]` | **Build-time (una vez)** |
+
+
 
 
 ### Tipo de instrucciones
 
 En la tabla anterior, puedes ver en la ultima columna que hay 2 tipos de instrucciones, las que se ejecutan una sola vez y las que se ejecutan en otro momento.
+
+```mermaid
+mindmap
+  root((Dockerfile Instructions))
+    Build-time
+      FROM
+      RUN
+      COPY
+      ADD
+      ARG
+      WORKDIR
+      USER
+      LABEL
+      EXPOSE
+      VOLUME
+      SHELL
+      ONBUILD
+    Run-time
+      CMD
+      ENTRYPOINT
+      HEALTHCHECK
+      STOPSIGNAL
+    Mixtas (Build → afectan Run)
+      ENV
+      USER
+      WORKDIR
+      VOLUME
+```
 
 ## Nuestra 1a imagen
 
