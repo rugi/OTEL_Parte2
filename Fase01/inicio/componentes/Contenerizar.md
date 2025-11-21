@@ -173,7 +173,7 @@ flowchart LR
     subgraph Runtime["Fase 2: Runtime (docker run)"]
         R1(FROM eclipse-temurin:17-jre)
         R2(COPY app.jar)
-        R3(CMD "java -jar app.jar")
+        R3(CMD java -jar app.jar)
     end
 
     C --> Runtime
