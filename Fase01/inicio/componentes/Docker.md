@@ -158,21 +158,20 @@ En otras palabras, controla y reparte los recursos (CPU, memoria, disco, red) en
 ¿Y no lo hacías porque implicaba entrar al BIOS? 😅
 
 En realidad, lo que esa advertencia nos pedía era activar el soporte de virtualización por hardware (Intel VT-x o AMD-V), no instalar un hypervisor.
-Esa opción del BIOS permite que el procesador ejecute instrucciones especiales que hacen posible que un hypervisor funcione de forma eficiente y segura.
-
-Una vez activada, ya podemos instalar uno.
+Esa opción del BIOS permite que el procesador ejecute instrucciones especiales que hacen posible que un hypervisor funcione de forma eficiente y segura. Una vez activada, ya podemos instalar uno (un hypervisor).
 VMware, VirtualBox y KVM son ejemplos de hypervisores.
+
 Hoy en día la mayoría de equipos personales ya tienen esta opción activa por defecto, pero hace algunos años era común toparse con ese mensaje.
 
 En resumen:
 
 *Para crear una máquina virtual se requiere un hypervisor, que es quien se encarga de simular el hardware y aislar los sistemas operativos que corren sobre él.*
 
-Teniendo el hypervisor, podemos virtualizar un sistema operativo completo y hacerlo independiente del de nuestra máquina personal.
+Teniendo el hypervisor, podemos virtualizar un sistema operativo completo y hacerlo independiente de nuestra máquina personal.
 Así, si nuestro equipo usa Windows, podemos tener una máquina virtual con Linux, o viceversa.
 
 Pero esto tiene un costo: al virtualizar todo el hardware, también necesitamos instalar el sistema operativo completo dentro de la VM para poder usarla.
-Después de eso, debemos instalar el software que queremos utilizar (binarios), y las bibliotecas (libs) que se requiere para ejecutar por ejemplo una aplicación (App A)
+Después, debemos instalar el software que queremos utilizar (binarios), y las bibliotecas (libs) que se requiere para ejecutar por ejemplo una aplicación (App A)
 
 Al final tendríamos algo como:
 
