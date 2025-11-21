@@ -48,3 +48,22 @@ flowchart TB
     style BaseDestino fill:#e3f2fd,stroke:#1565c0
 
 ```
+
+Ahora, antes de continuar, validemos que tenemos todo listo.
+
+## Requerimientos
+
+### App java
+
+### Docker
+
+## Docker file
+
+### Instrucciones
+### Tipo de instrucciones
+
+## Nuestra 1a imagen
+
+## Optimizemos
+
+## Version final.
