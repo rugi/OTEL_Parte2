@@ -52,10 +52,13 @@ flowchart TB
 Ahora, antes de continuar, validemos que tenemos todo listo.
 
 ## Requerimientos
+Para completar esta parte, requerimos:
 
 ### App java
+Si llegaste directo a esta página, no te preocupes, tenemos ya una sección donde explicamos como generar esta app Java.
 
 ### Docker
+Debes haber superado ya la sección Docker 101. 
 
 ## Docker file
 
