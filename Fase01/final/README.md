@@ -72,6 +72,18 @@ graph TD
     style Network fill:#dfe4ea,stroke:#57606f,stroke-dasharray:3 3
 ```
 
+Detalle de los puertos utilizados hasta el momento:
+
+| Servicio       | Puerto | Uso real                       |
+| -------------- | ------ | ------------------------------ |
+| app-java       | 8080   | Endpoint `/pago`               |
+| otel-collector | 4317   | OTLP gRPC receiver             |
+| otel-collector | 13133  | Health check                   |
+| otel-collector | 8888   | Metrics internas del collector |
+| jaeger         | 16686  | UI                             |
+| jaeger         | 14250  | gRPC collector                 |
+| jaeger         | 9411   | Zipkin receiver                |
+
 ---
 
 ## 🚀 Puesta en marcha.
