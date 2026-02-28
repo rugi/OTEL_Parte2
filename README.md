@@ -50,10 +50,10 @@ Las fases aun no completadas podrán cambiar de stack sin aviso, el objetivo es 
 
 Este laboratorio servirá de base para varias charlas en 2026. Si me ves en alguna, **salúdame, me encantará saber que llegaste aquí**.
 
-* `🟩` EVENTO: [https://2025.jconf.gt/es] (JConf Guatemala. 2025)
-    * Charlas:
-        * OpenTelemetry para todos.
-        * 3 JEPs que debemos conocer.
+### 2026
+#### Abril.
+##### KCD Guadalajara 2026., México México.
+###### Evitando el vendor lock-in en el almacenamiento de tu observabilidad: OpenTelemetry & amigos. Charla.
 
 
 ## 📹 ¿Quieres videos?
