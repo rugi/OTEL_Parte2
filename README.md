@@ -52,8 +52,8 @@ Este laboratorio servirá de base para varias charlas en 2026. Si me ves en algu
 
 ### 2026
 #### Abril.
-##### KCD Guadalajara 2026., México México.
-###### Evitando el vendor lock-in en el almacenamiento de tu observabilidad: OpenTelemetry & amigos. Charla.
+* KCD Guadalajara 2026., México México.
+* * Evitando el vendor lock-in en el almacenamiento de tu observabilidad: OpenTelemetry & amigos. Charla.
 
 
 ## 📹 ¿Quieres videos?
