@@ -244,7 +244,7 @@ Ejecuta, para ver que contenedores están en ejecución:
 %> docker ps
 CONTAINER ID   IMAGE                                         COMMAND                  CREATED         STATUS         PORTS                                                                                                                      NAMES
 b7541b0ef121   final-app-java                                "sh -c 'java $JAVA_O…"   6 minutes ago   Up 6 minutes   0.0.0.0:8080->8080/tcp                                                                                                     app-java
-90d114c46cba   otel/opentelemetry-collector-contrib:0.86.0   "/otelcol-contrib --…"   6 minutes ago   Up 6 minutes   0.0.0.0:4317->4317/tcp, 0.0.0.0:8888->8888/tcp, 0.0.0.0:13133->13133/tcp, 0.0.0.0:55681->55681/tcp, 55678-55679/tcp        otel-collector
+90d114c46cba   otel/opentelemetry-collector-contrib:0.86.0   "/otelcol-contrib --…"   6 minutes ago   Up 6 minutes   0.0.0.0:4317->4317/tcp, 0.0.0.0:8888->8888/tcp, 0.0.0.0:13133->13133/tcp, 55678-55679/tcp        otel-collector
 57c9073bb105   jaegertracing/all-in-one:1.49                 "/go/bin/all-in-one-…"   6 minutes ago   Up 6 minutes   5775/udp, 0.0.0.0:9411->9411/tcp, 5778/tcp, 0.0.0.0:14250->14250/tcp, 6831-6832/udp, 14268/tcp, 0.0.0.0:16686->16686/tcp   jaeger
 ```
 
