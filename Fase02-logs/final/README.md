@@ -260,52 +260,6 @@ Si todo está funcionando correctamente deberías poder:
 
 ---
 
-# Script Linux/macOS
-
-Archivo: `scripts/generar_trafico.sh`
-
-```bash
-#!/bin/bash
-
-echo "Generando tráfico hacia app-java..."
-
-URL="http://localhost:8080/pago"
-
-for i in {1..20}
-do
-  curl -s $URL > /dev/null
-  echo "request $i enviada"
-  sleep 1
-done
-
-echo "Tráfico generado."
-```
-
-Dar permisos de ejecución:
-```bash
-chmod +x scripts/generar_trafico.sh
-```
-
-# Script Windows (PowerShell)
-Archivo: scripts/generar_trafico.ps1
-
-```bash
-Write-Host "Generando tráfico hacia app-java..."
-
-$url = "http://localhost:8080/pago"
-
-for ($i=1; $i -le 20; $i++) {
-    Invoke-WebRequest -Uri $url -Method Get | Out-Null
-    Write-Host "request $i enviada"
-    Start-Sleep -Seconds 1
-}
-
-Write-Host "Tráfico generado."
-```
-Ejecutar:
-```bash
-.\scripts\generar_trafico.ps1
-```
 # Cierre de la fase
 
 La Fase 02 se considera completada cuando:
