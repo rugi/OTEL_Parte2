@@ -34,14 +34,14 @@ Las fases aun no completadas podrán cambiar de stack sin aviso, el objetivo es 
  
 | Fase     | Objetivo                                                                 | Stack principal                                                | Estatus       | Liberado en:|
 |----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|---------------|
-| <a href="Fase01/Readme.md">Fase 01</a>  | Instrumentar trazas usando agente automático de OpenTelemetry           | OpenTelemetry Collector, app-java, Jaeger                      | 🔄 En revisión  | JConf Guatemala 2025. |
-| Fase 02  | Recolección y visualización de logs desde contenedores Docker           | Loki, Fluent Bit/Promtail, Grafana                                      | 🔄 En revisión   | Pendiente |
-| Fase 03  | Integrar métricas con Prometheus y visualizarlas en Grafana             | Prometheus, OpenTelemetry Collector, Grafana                   | 🚧 Pendiente  | Pendiente |
-| Fase 04  | Correlación e integración avanzada entre trazas, logs y métricas        | OTel Collector, Loki, Prometheus, Grafana, TraceQL, LogsQL     | 🚧 Pendiente  | Pendiente |
-| Fase 05  | Bonus: Dashboards como código utilizando PERSES                         | PERSES, Grafana, OTel, Loki, Prometheus                        | 🚧 Pendiente  | Pendiente |
-| Fase 06  | Persistencia distribuida de logs                                         | Loki + MinIO (S3-like backend), Docker volumes                 | 🚧 Pendiente  | Pendiente |
-| Fase 07  | Persistencia distribuida de trazas                                       | Tempo + MinIO, Jaeger, OTel Collector                          | 🚧 Pendiente  | Pendiente |
-| Fase 08 | Persistencia distribuida de métricas                                      | Prometheus + Thanos + MinIO                                    | 🚧 Pendiente | Pendiente |
+| <a href="Fase01-traces/Readme.md">Fase01-traces</a>  | Instrumentar trazas usando agente automático de OpenTelemetry           | OpenTelemetry Collector, app-java, Jaeger                      | 🔄 En revisión  | JConf Guatemala 2025. |
+| Fase02-logs  | Recolección y visualización de logs desde contenedores Docker           | Loki, Fluent Bit/Promtail, Grafana                                      | 🔄 En revisión   | Pendiente |
+| Fase03-metrics  | Integrar métricas con Prometheus y visualizarlas en Grafana             | Prometheus, OpenTelemetry Collector, Grafana                   | 🚧 Pendiente  | Pendiente |
+| Fase04-correlation  | Correlación e integración avanzada entre trazas, logs y métricas        | OTel Collector, Loki, Prometheus, Grafana, TraceQL, LogsQL     | 🚧 Pendiente  | Pendiente |
+| Fase05-perses  | Dashboards como código utilizando PERSES                         | PERSES, Grafana, OTel, Loki, Prometheus                        | 🚧 Pendiente  | Pendiente |
+| Fase06-distributed-logs  | Persistencia distribuida de logs                                         | Loki + MinIO (S3-like backend), Docker volumes                 | 🚧 Pendiente  | Pendiente |
+| Fase07-distributes-traces  | Persistencia distribuida de trazas                                       | Tempo + MinIO, Jaeger, OTel Collector                          | 🚧 Pendiente  | Pendiente |
+| Fase08-distributes-metrics | Persistencia distribuida de métricas                                      | Prometheus + Thanos + MinIO                                    | 🚧 Pendiente | Pendiente |
 
  
 
