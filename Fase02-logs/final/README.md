@@ -18,13 +18,27 @@ Los logs pueden ser recolectados usando dos herramientas:
 
 ```mermaid
 graph TD
-A[app-java] --> B[docker logs]
-B --> C[promtail]
-B --> D[fluent-bit]
-C --> E[loki]
-D --> E[loki]
-E --> F[grafana]
+
+A[app-java<br/>HTTP :8080] -->|stdout logs| B[docker logs<br/>/var/lib/docker/containers]
+
+B -->|read logs| C[promtail]
+B -->|read logs| D[fluent-bit]
+
+C -->|HTTP :3100<br/>push logs| E[loki]
+D -->|HTTP :3100<br/>push logs| E[loki]
+
+E -->|HTTP :3100<br/>query| F[grafana<br/>HTTP :3000]
 ```
+
+## Tabla de puertos
+| Componente        | Puerto | Tipo     | Uso                                                                                                                      |
+| ----------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **app-java**      | 8080   | HTTP     | Endpoint de la aplicación (`/pago`). Se utiliza para generar tráfico y producir logs.                                    |
+| **Promtail**      | —      | Interno  | Promtail no expone puerto público. Lee logs directamente desde `/var/lib/docker/containers`.                             |
+| **Fluent Bit**    | —      | Interno  | Fluent Bit tampoco expone puerto público. Lee logs desde archivos de Docker y los envía a Loki.                          |
+| **Loki**          | 3100   | HTTP API | Endpoint de Loki para ingestión y consultas de logs. Grafana se conecta aquí para realizar búsquedas.                    |
+| **Grafana**       | 3000   | HTTP     | Interfaz web para visualizar logs y explorar datos en Loki.                                                              |
+| **Docker Engine** | —      | Interno  | Mantiene los archivos de logs de contenedores en `/var/lib/docker/containers`, que son leídos por Promtail o Fluent Bit. |
 
 ---
 
