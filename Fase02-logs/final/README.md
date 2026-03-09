@@ -170,24 +170,83 @@ Last 5 minutes
 
 # Paso 6 – Verificar que el recolector funcione
 
-### Si usas Promtail
+Una vez generado tráfico, es importante verificar que el componente encargado de recolectar logs esté funcionando correctamente.
 
-```bash
+En este laboratorio existen dos opciones de recolector:
+
+*  Promtail (recomendado para comenzar)
+* Fluent Bit (más flexible y usado en entornos productivos)
+
+⚠️ Solo uno debe estar activo a la vez para evitar duplicación de logs.
+
+Si usas Promtail
+
+Ejecutar:
+```
 docker compose logs promtail
 ```
 
-Deberías ver mensajes indicando lectura de logs de contenedores.
+Deberías ver mensajes indicando que Promtail está leyendo logs desde los contenedores Docker.
 
----
+Ejemplo esperado:
+```
+level=info msg="tailing new file" filename=/var/lib/docker/containers/.../container.log
+```
+Si usas Fluent Bit
 
-### Si usas Fluent Bit
-
-```bash
+Ejecutar:
+```
 docker compose logs fluent-bit
 ```
+Deberías ver mensajes indicando que Fluent Bit está enviando logs a Loki.
 
-Deberías ver mensajes indicando envío de logs a Loki.
+Ejemplo esperado:
+```
+[info] [output:loki:loki.0] sending batch to http://loki:3100
+```
+6.1 – Cambiar entre Promtail y Fluent Bit
 
+El componente activo se define en el archivo:
+
+```
+docker-compose.yml
+```
+Ahí puedes habilitar uno y deshabilitar el otro comentando el servicio correspondiente.
+
+Ejemplo usando Promtail:
+
+```
+services:
+  promtail:
+    image: grafana/promtail
+    ...
+```
+y dejando Fluent Bit deshabilitado:
+
+```
+# fluent-bit:
+#   image: fluent/fluent-bit
+```
+
+Si deseas probar Fluent Bit, puedes invertir la configuración:
+```
+services:
+  fluent-bit:
+    image: fluent/fluent-bit
+```
+y comentar Promtail.
+
+Después de cambiar el recolector, reinicia el laboratorio:
+
+```
+docker compose down
+docker compose up -d
+Resultado esperado
+```
+Después de cambiar el recolector y generar tráfico nuevamente, deberías poder ver logs en Grafana usando consultas como:
+```
+{container="app-java"}
+```
 ---
 
 # Resultado esperado
