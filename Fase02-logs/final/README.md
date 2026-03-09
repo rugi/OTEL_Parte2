@@ -207,3 +207,37 @@ done
 
 echo "Tráfico generado."
 ```
+
+Dar permisos de ejecución:
+```bash
+chmod +x scripts/generar_trafico.sh
+```
+
+# Script Windows (PowerShell)
+Archivo: scripts/generar_trafico.ps1
+
+```bash
+Write-Host "Generando tráfico hacia app-java..."
+
+$url = "http://localhost:8080/pago"
+
+for ($i=1; $i -le 20; $i++) {
+    Invoke-WebRequest -Uri $url -Method Get | Out-Null
+    Write-Host "request $i enviada"
+    Start-Sleep -Seconds 1
+}
+
+Write-Host "Tráfico generado."
+```
+Ejecutar:
+```bash
+.\scripts\generar_trafico.ps1
+```
+# Cierre de la fase
+
+La Fase 02 se considera completada cuando:
+
+✔ Grafana puede consultar Loki
+✔ logs de app-java aparecen en tiempo real
+✔ las etiquetas permiten filtrar logs
+✔ Promtail o Fluent Bit pueden recolectar logs correctamente
