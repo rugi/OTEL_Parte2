@@ -30,9 +30,7 @@ fase-1-tracing/
 ├── otel-collector/            # Configuración del Collector
 │   └── config.yaml
 ├── docker-compose.yml         # Orquestador de servicios
-├── lab-operaciones.md         # Guía para levantar, detener y explorar el laboratorio
-├── scripts/
-│   └── generar_trafico.sh     # Script para generar trazas
+├── demoFase01.mp4         # Orquestador de servicios
 └── README.md                  # Este documento
 ```
 
