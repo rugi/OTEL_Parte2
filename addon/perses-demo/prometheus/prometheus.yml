@@ -5,8 +5,11 @@ global:
 scrape_configs:
   - job_name: 'prometheus'
     static_configs:
-      - targets: ['prometheus:9090']
+      - targets:
+          - 'prometheus:9090'
 
   - job_name: 'metrics-app'
+    metrics_path: /metrics
     static_configs:
-      - targets: ['metrics-app:8000']
+      - targets:
+          - 'metrics-app:8000'
