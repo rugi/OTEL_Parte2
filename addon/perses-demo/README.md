@@ -66,9 +66,7 @@ demo_temperature_celsius
 histogram_quantile(0.95, sum by (le, endpoint) (rate(demo_request_latency_seconds_bucket[1m])))
 ```
 
-## Idea para presentarlo
-
-Puedes vender el demo así:
+## Resumen
 
 - Prometheus recolecta métricas.
 - Perses consume Prometheus como datasource.
