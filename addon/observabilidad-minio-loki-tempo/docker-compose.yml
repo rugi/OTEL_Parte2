@@ -1,0 +1,153 @@
+services:
+  app-java:
+    build:
+      context: ./app-java
+    container_name: app-java
+    ports:
+      - "8080:8080"
+      - "9001:9001"
+    environment:
+      OTEL_SERVICE_NAME: app-java
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+    depends_on:
+      - otel-collector
+    networks:
+      - observabilidad-net
+
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.121.0
+    container_name: otel-collector
+    volumes:
+      - ./otel-collector/config.yaml:/etc/otelcol-contrib/config.yaml:ro
+    depends_on:
+      - tempo
+    networks:
+      - observabilidad-net
+
+  prometheus:
+    image: prom/prometheus:v2.55.0
+    container_name: prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.path=/prometheus
+      - --web.enable-lifecycle
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - app-java
+    networks:
+      - observabilidad-net
+
+  minio:
+    image: minio/minio:RELEASE.2025-02-03T21-03-04Z
+    container_name: minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    ports:
+      - "9000:9000"
+      - "9002:9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks:
+      - observabilidad-net
+
+  minio-init:
+    image: minio/mc:RELEASE.2025-02-08T19-14-21Z
+    container_name: minio-init
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      until /usr/bin/mc alias set local http://minio:9000 minioadmin minioadmin123; do echo 'esperando minio'; sleep 2; done;
+      /usr/bin/mc mb -p local/loki-data || true;
+      /usr/bin/mc mb -p local/tempo-data || true;
+      /usr/bin/mc anonymous set none local/loki-data || true;
+      /usr/bin/mc anonymous set none local/tempo-data || true;
+      echo 'Buckets creados';
+      exit 0;
+      "
+    networks:
+      - observabilidad-net
+
+  tempo:
+    image: grafana/tempo:2.7.1
+    container_name: tempo
+    command: ["-config.file=/etc/tempo/config.yaml"]
+    volumes:
+      - ./tempo/config.yaml:/etc/tempo/config.yaml:ro
+    ports:
+      - "3200:3200"
+      - "4317:4317"
+      - "4318:4318"
+    depends_on:
+      - minio-init
+    networks:
+      - observabilidad-net
+
+  loki:
+    image: grafana/loki:2.9.8
+    container_name: loki
+    command: -config.file=/etc/loki/config.yaml
+    volumes:
+      - ./loki/config.yaml:/etc/loki/config.yaml:ro
+    ports:
+      - "3100:3100"
+    depends_on:
+      - minio-init
+    networks:
+      - observabilidad-net
+
+  fluent-bit:
+    image: fluent/fluent-bit:3.1.9
+    container_name: fluent-bit
+    volumes:
+      - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf:ro
+      - ./fluent-bit/parsers.conf:/fluent-bit/etc/parsers.conf:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./fluent-bit/state:/fluent-bit/state
+    depends_on:
+      - loki
+    networks:
+      - observabilidad-net
+
+  grafana:
+    image: grafana/grafana:11.1.0
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      - loki
+      - tempo
+      - prometheus
+    networks:
+      - observabilidad-net
+
+networks:
+  observabilidad-net:
+    driver: bridge
+
+volumes:
+  grafana_data:
+  prometheus_data:
+  minio_data:
