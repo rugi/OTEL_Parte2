@@ -202,3 +202,13 @@ En Grafana, abre **Explore** y usa el datasource **Tempo** para buscar trazas de
 
 - Esta versión mantiene **Grafana** solo como ayuda para validar el stack; **Perses** queda aislado en el  otro proyecto.
 - Si después quieres persistencia distribuida de métricas en MinIO, el siguiente paso natural es **Thanos**.
+
+---
+
+###  Para casos de emergencia:
+
+docker compose down --remove-orphans
+
+docker compose up --build --force-recreate
+
+borrar fluent-bit/state/
