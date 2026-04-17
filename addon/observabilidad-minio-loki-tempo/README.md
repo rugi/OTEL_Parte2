@@ -212,3 +212,5 @@ docker compose down --remove-orphans
 docker compose up --build --force-recreate
 
 borrar fluent-bit/state/
+
+/var/lib/docker/volumes/minio_data/_data
