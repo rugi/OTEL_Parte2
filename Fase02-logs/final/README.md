@@ -83,7 +83,7 @@ Para que aparezcan logs en Loki necesitamos generar solicitudes hacia la aplicac
 ### Linux / macOS
 
 Ejecutar:
-
+(asegurate de darle permisos de ejecución si estas en linux o mac)
 ```bash
 ./scripts/generar_trafico.sh
 ```
