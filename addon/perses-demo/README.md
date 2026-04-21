@@ -48,6 +48,10 @@ Una vez abierto Perses:
 4. Crea un dashboard nuevo.
 5. Agrega un panel de serie de tiempo con alguna de estas consultas PromQL:
 
+<br>
+<img src="crearDataSource.png" witdh=250/>
+<br>
+
 ### Panel 1 - Requests por endpoint
 
 ```promql
