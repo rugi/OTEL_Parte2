@@ -44,9 +44,11 @@ Una vez abierto Perses:
 1. Crea un proyecto, por ejemplo `demo`.
 2. Crea un datasource de tipo **Prometheus**.
 3. Usa como URL del datasource: `http://prometheus:9090`
+   - Marcala como default
    - Nota: dentro de Docker Compose, Perses debe hablar con el nombre del servicio, no con `localhost`.
-4. Crea un dashboard nuevo.
-5. Agrega un panel de serie de tiempo con alguna de estas consultas PromQL:
+   - Apoyate en la imagen adjunta.
+5. Crea un dashboard nuevo.
+6. Agrega un panel de serie de tiempo con alguna de estas consultas PromQL:
 
 <br>
 <img src="crearDataSource.png" witdh=250/>
