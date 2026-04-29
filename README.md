@@ -43,7 +43,14 @@ Las fases aun no completadas podrán cambiar de stack sin aviso, el objetivo es 
 | Fase07-distributes-traces  | Persistencia distribuida de trazas                                       | Tempo + MinIO, Jaeger, OTel Collector                          | 🚧 Pendiente  | Pendiente |
 | Fase08-distributes-metrics | Persistencia distribuida de métricas                                      | Prometheus + Thanos + MinIO                                    | 🚧 Pendiente | Pendiente |
 
- 
+## Addon's
+
+Llamé addons a proyectos aislados que sirven para mostrar un componente específico del laboratorio completo, se usan para complementar una charla o para mostrar exclusivamente la puesta en marcha de un componente.
+De momento llevo 2.
+| Nombre     | Objetivo                                                                 | Stack principal                                                | Estatus       | Liberado en:|
+|----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|---------------|
+| <a href="">Perses</a>  | Ejemplo aislado de perses           | Perses                    | ✅ OK  | KCD México 2026. |
+| <a href="">minIO</a>  | Ejemplo aislado de minIO         | minIO                     | ✅ OK  | KCD México 2026. |
 
 ## 🎤 Próximas Charlas
 
