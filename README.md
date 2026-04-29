@@ -49,8 +49,8 @@ Llamé addons a proyectos aislados que sirven para mostrar un componente especí
 De momento llevo 2.
 | Nombre     | Objetivo                                                                 | Stack principal                                                | Estatus       | Liberado en:|
 |----------|--------------------------------------------------------------------------|----------------------------------------------------------------|---------------|---------------|
-| <a href="">Perses</a>  | Ejemplo aislado de perses           | Perses                    | ✅ OK  | KCD México 2026. |
-| <a href="">minIO</a>  | Ejemplo aislado de minIO         | minIO                     | ✅ OK  | KCD México 2026. |
+| <a href="addon/perses-demo/README.md">Perses</a>  | Ejemplo aislado de perses           | Perses                    | ✅ OK  | KCD México 2026. |
+| <a href="addon/observabilidad-minio-loki-tempo/README.md">minIO</a>  | Ejemplo aislado de minIO         | minIO                     | ✅ OK  | KCD México 2026. |
 
 ## 🎤 Próximas Charlas
 
